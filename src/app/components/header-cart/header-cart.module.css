@@ -1,0 +1,39 @@
+.cart-wrapper {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.cart-amount {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: #FFC85E;
+    top: -15%;
+    left: 65%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-title {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 150%;
+    color: #3F4E65;
+}
+
+.cart-total {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: #111111;
+}

@@ -1,0 +1,30 @@
+.title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.filter {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-lable {
+    font-size: 14px;
+    line-height: 150%;
+    color: #3F4E65;
+    margin-left: 8px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.checkbox-list {
+    margin-top: 20px;
+}

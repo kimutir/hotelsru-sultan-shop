@@ -1,0 +1,28 @@
+.contacts-list {
+    list-style: none;
+    font-family: 'Inter';
+    font-size: 14px;
+    line-height: 130.02%;
+    display: flex;
+    gap: 2rem;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-logo {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-title {
+    font-weight: 600;
+    color: #111111;
+}
+
+.contact-description {
+    color: #3F4E65;
+}

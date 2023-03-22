@@ -1,0 +1,24 @@
+.select {
+    border:none;
+    outline: none;
+    font-size: 16px;
+    line-height: 150%;
+    color: #3F4E65;
+}
+
+.select:focus {
+    border: none;
+    outline: none;
+}
+
+.select-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #111111;
+}
+
+.select-wrapper {
+    display: flex;
+    gap: 0.2rem;
+}

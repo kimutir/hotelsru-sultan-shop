@@ -1,0 +1,14 @@
+.nav-list {
+    list-style: none;
+    font-family: 'Inter';
+    font-size: 14px;
+    line-height: 150%;
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-item {
+    color: #3F4E65;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
