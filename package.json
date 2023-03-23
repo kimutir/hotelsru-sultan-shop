@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --mode=development",
-    "build": "webpack --mode development --progress --hide-modules"
+    "build": "webpack --mode development --progress"
   },
   "keywords": [],
   "author": "",
