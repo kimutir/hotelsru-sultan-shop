@@ -1,14 +1,14 @@
 import LayoutFlex from "@layouts/layout-flex";
 import CustomSelect from "@custom/select/custom-select";
-import FilterFor from "@components/filters/filter-for/filter-for";
-import FilterCheckbox from "@components/filters/filter-checkbox/filter-checkbox";
+import FilterFor from "@elements/filters/filter-for/filter-for";
+import FilterCheckbox from "@elements/filters/filter-checkbox/filter-checkbox";
 import CatalogList from "@components/catalog/catalog-list/catalog-list";
 import React from "react";
-import { useAppDispatch } from "../../../store/hooks";
+import { useAppDispatch } from "@store/hooks";
 import {
   loadCatalog,
   changeSortParam,
-} from "../../../store/reducers/reducerCatalog";
+} from "@store/reducers/reducerCatalog";
 import data from "../../../initial-data.json";
 
 const CatalogMain = () => {

@@ -5,7 +5,7 @@ import styles from "./filter-for.module.css";
 
 interface PropsType {
   items: { title: string; value: string }[];
-  onCLick?: () => void;
+  onFilterCLick?: () => void;
 }
 
 const FilterFor: React.FC<PropsType> = ({ items }) => {

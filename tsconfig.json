@@ -23,6 +23,7 @@
         "@components/*": ["app/components/*"],
         "@containers/*": ["app/containers/*"],
         "@store/*": ["store/*"],
+        "@elements/*": ["app/elements/*"],
       }
     },
   "include": ["src"]

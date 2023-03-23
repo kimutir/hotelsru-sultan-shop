@@ -24,7 +24,7 @@ const LayoutFlex: React.FC<PropsType> = ({
       style={{
         margin: "0 auto",
         marginTop: marginTop ?? "0",
-        width: "70%",
+        width: "90%",
         height: "100%",
         display: "flex",
         justifyContent: justifyContent ?? "center",

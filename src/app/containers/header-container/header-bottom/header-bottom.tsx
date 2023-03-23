@@ -6,9 +6,9 @@ import managerPhoto from "@assets/images/manager.png";
 import logo from "@assets/images/logo.png";
 import CustomInput from "@custom/input/custom-input";
 import styles from "./header-bottom.module.css";
-import HeaderManager from "@components/header-manager/header-manager";
 import HeaderCart from "@components/header-cart/header-cart";
 import LayoutFlex from "@layouts/layout-flex";
+import HeaderManager from "@elements/header-manager/header-manager";
 
 const HeaderBottom = () => {
   return (

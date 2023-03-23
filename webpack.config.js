@@ -15,6 +15,10 @@ module.exports = {
       "@pages": path.resolve(__dirname, "./src/app/pages/"),
       "@layouts": path.resolve(__dirname, "./src/app/layouts/"),
       "@store": path.resolve(__dirname, "./src/store/"),
+      "@elements": path.resolve(
+        __dirname,
+        "./src/app/elements/",
+      ),
       "@components": path.resolve(
         __dirname,
         "./src/app/components/",
