@@ -2,16 +2,18 @@ import React from "react";
 import styles from "./custom-button.module.css";
 
 interface PropsType {
-  text: string;
-  icon: string;
+  text?: string;
+  icon?: string;
+  isCircle?: boolean;
+  onClick?: () => void;
 }
 
-const CustomButton: React.FC<PropsType> = ({ text, icon }) => {
+const CustomButton: React.FC<PropsType> = ({ text, icon, isCircle, onClick }) => {
   return (
-    <button className={styles.button}>
+    <button onClick={onClick} className={isCircle ? styles["button-round"] : styles.button}>
       <div className={styles["button-content"]}>
-        {text}
-        <img className={styles["button-icon"]} src={icon} />
+        {text && text}
+        {icon && <img className={styles["button-icon"]} src={icon} />}
       </div>
     </button>
   );

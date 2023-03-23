@@ -3,6 +3,7 @@ declare namespace CustomButtonModuleCssNamespace {
     "button": string;
     "button-content": string;
     "button-icon": string;
+    "button-round": string;
   }
 }
 

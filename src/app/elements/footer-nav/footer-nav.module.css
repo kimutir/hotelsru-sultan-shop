@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}

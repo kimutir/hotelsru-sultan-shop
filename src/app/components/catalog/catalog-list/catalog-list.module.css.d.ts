@@ -1,5 +1,6 @@
 declare namespace CatalogListModuleCssNamespace {
   export interface ICatalogListModuleCss {
+    "catalog": string;
     "catalog-list": string;
   }
 }

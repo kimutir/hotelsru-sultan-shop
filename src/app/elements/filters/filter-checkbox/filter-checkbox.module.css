@@ -7,9 +7,9 @@
 }
 
 .filter {
-    height: 250px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .checkbox-lable {

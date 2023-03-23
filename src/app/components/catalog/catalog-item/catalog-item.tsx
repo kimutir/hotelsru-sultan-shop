@@ -1,14 +1,18 @@
-import CustomButton from "../../../custom/button/custom-button";
-import cartIcon from "@assets/images/icons/icon-cart.png";
+import CustomButton from "@custom/button/custom-button";
+import cartIcon from "@assets/images/icons/icon-cart-white.png";
 import styles from "./catalog-item.module.css";
-import { CatalogItemType } from "../../../../store/reducers/reducerCatalog";
+import { CatalogItemType } from "@store/reducers/reducerCatalog";
 import React from "react";
+import { useAppDispatch } from "@store/hooks";
+import { addToCart } from "@store/reducers/reducerCart";
 
 interface PropsType {
   item: CatalogItemType;
 }
 
 const CatalogItem: React.FC<PropsType> = ({ item }) => {
+  const dispatch = useAppDispatch();
+
   return (
     <div className={styles.item}>
       <div className={styles.image}>
@@ -29,11 +33,15 @@ const CatalogItem: React.FC<PropsType> = ({ item }) => {
           Бренд: <span>{item.brend}</span>
         </p>
         <p className={styles.info}>
-          Тип ухода: <span>{item.for}</span>
+          Тип ухода: <span>{item.for === "body" ? "За телом" : "За руками"}</span>
         </p>
         <div className={styles.bottom}>
           <strong>{item.price}</strong>
-          <CustomButton text="В корзину" icon={cartIcon} />
+          <CustomButton
+            onClick={() => dispatch(addToCart(item))}
+            text="В корзину"
+            icon={cartIcon}
+          />
         </div>
       </div>
     </div>

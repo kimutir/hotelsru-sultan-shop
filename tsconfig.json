@@ -24,6 +24,7 @@
         "@containers/*": ["app/containers/*"],
         "@store/*": ["store/*"],
         "@elements/*": ["app/elements/*"],
+        "@utils/*": ["app/utils/*"],
       }
     },
   "include": ["src"]

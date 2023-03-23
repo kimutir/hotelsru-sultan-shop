@@ -14,19 +14,11 @@ module.exports = {
       "@custom": path.resolve(__dirname, "./src/app/custom/"),
       "@pages": path.resolve(__dirname, "./src/app/pages/"),
       "@layouts": path.resolve(__dirname, "./src/app/layouts/"),
+      "@utils": path.resolve(__dirname, "./src/app/utils/"),
       "@store": path.resolve(__dirname, "./src/store/"),
-      "@elements": path.resolve(
-        __dirname,
-        "./src/app/elements/",
-      ),
-      "@components": path.resolve(
-        __dirname,
-        "./src/app/components/",
-      ),
-      "@containers": path.resolve(
-        __dirname,
-        "./src/app/containers/",
-      ),
+      "@elements": path.resolve(__dirname, "./src/app/elements/"),
+      "@components": path.resolve(__dirname, "./src/app/components/"),
+      "@containers": path.resolve(__dirname, "./src/app/containers/"),
     },
   },
   module: {
@@ -47,8 +39,7 @@ module.exports = {
             loader: "css-loader",
             options: {
               modules: {
-                localIdentName:
-                  "[name]__[local]___[hash:base64:5]",
+                localIdentName: "[name]__[local]___[hash:base64:5]",
               },
             },
           },

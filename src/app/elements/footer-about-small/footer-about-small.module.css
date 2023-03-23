@@ -1,0 +1,18 @@
+.about {
+    width: 320px;
+    color: #fff;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.text {
+    margin-bottom: 45px;
+}
+
+.mail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

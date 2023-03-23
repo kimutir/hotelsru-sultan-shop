@@ -1,15 +1,12 @@
 import LayoutFlex from "@layouts/layout-flex";
 import CustomSelect from "@custom/select/custom-select";
 import FilterFor from "@elements/filters/filter-for/filter-for";
-import FilterCheckbox from "@elements/filters/filter-checkbox/filter-checkbox";
 import CatalogList from "@components/catalog/catalog-list/catalog-list";
 import React from "react";
 import { useAppDispatch } from "@store/hooks";
-import {
-  loadCatalog,
-  changeSortParam,
-} from "@store/reducers/reducerCatalog";
+import { loadCatalog, changeSortParam } from "@store/reducers/reducerCatalog";
 import data from "../../../initial-data.json";
+import MainAsideContainer from "@containers/main-aside-container/main-aside.container";
 
 const CatalogMain = () => {
   const dispatch = useAppDispatch();
@@ -24,10 +21,10 @@ const CatalogMain = () => {
   const sortOptions = [
     {
       value: "title-up",
-      description: "Название по возрастанию",
+      description: "Название А-Я",
     },
-    { value: "title-down", description: "Название по убыванию" },
-    { value: "price-up", description: "Цена по возростанию" },
+    { value: "title-down", description: "Название Я-А" },
+    { value: "price-up", description: "Цена по возрастанию" },
     { value: "price-down", description: "Цена по убыванию" },
   ];
 
@@ -36,18 +33,11 @@ const CatalogMain = () => {
     { title: "За руками", value: "hands" },
   ];
 
-  const checkboxOptions = [
-    { value: "a", title: "first" },
-    { value: "b", title: "second" },
-  ];
-
   return (
     <>
       <LayoutFlex justifyContent="flex-end" marginTop="10px">
         <CustomSelect
-          onChangeSelect={(value: string) =>
-            dispatch(changeSortParam(value))
-          }
+          onChangeSelect={(value: string) => dispatch(changeSortParam(value))}
           options={sortOptions}
           title="Сортировка"
         />
@@ -55,15 +45,8 @@ const CatalogMain = () => {
       <LayoutFlex justifyContent="start">
         <FilterFor items={filterOptions} />
       </LayoutFlex>
-      <LayoutFlex
-        alignItems="top"
-        justifyContent="space-between"
-      >
-        <FilterCheckbox
-          checkboxOptions={checkboxOptions}
-          title="Производитель"
-        />
-
+      <LayoutFlex alignItems="top" justifyContent="space-between">
+        <MainAsideContainer />
         <CatalogList />
       </LayoutFlex>
     </>

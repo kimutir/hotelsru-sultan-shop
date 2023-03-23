@@ -1,23 +1,26 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useAppSelector } from "@store/hooks";
 import CatalogItem from "../catalog-item/catalog-item";
 import styles from "./catalog-list.module.css";
 import { CatalogItemType } from "@store/reducers/reducerCatalog";
+import PaginationNumbers from "@elements/pagination/pagination-numbers";
 
 const CatalogList = () => {
   const catalog = useAppSelector((state) => state.catalog.list);
-  const sortParam = useAppSelector(
-    (state) => state.catalog.sortParam,
-  );
-  const filterParams = useAppSelector(
-    (state) => state.catalog.filterParams,
-  );
+  const sortParam = useAppSelector((state) => state.catalog.sortParam);
+  const filterParams = useAppSelector((state) => state.catalog.filterParams);
 
-  const [catalogList, setCatalogList] =
-    React.useState<CatalogItemType[]>(catalog);
+  const [catalogList, setCatalogList] = React.useState<CatalogItemType[]>(catalog);
+  const [sortedCatalogList, setSortedCatalogList] = React.useState<CatalogItemType[]>([]);
+  const [renderCatalogList, setRenderCatalogList] = React.useState<CatalogItemType[]>([]);
 
+  const [page, setPage] = React.useState(1);
+  const perPage = 12;
+
+  // сортировка списка товаров
   React.useEffect(() => {
-    const result = [...catalog];
+    let result = [...catalog];
     const [value, direction] = sortParam.split("-");
     if (direction === "down") {
       result.sort((a, b) => (a[value] > b[value] ? -1 : 1));
@@ -25,24 +28,70 @@ const CatalogList = () => {
     if (direction === "up") {
       result.sort((a, b) => (a[value] > b[value] ? 1 : -1));
     }
-    setCatalogList(result);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    setSortedCatalogList(result);
   }, [sortParam]);
 
+  // фильтрация списка товаров
   React.useEffect(() => {
-    const result = catalog.filter(
-      (i) => i.for === filterParams.for,
-    );
+    let result = [...sortedCatalogList];
+    if (
+      Object.values(filterParams)
+        .map((i) => {
+          if (!i || !i.length) {
+            return false;
+          } else {
+            return true;
+          }
+        })
+        .includes(true)
+    ) {
+      if (filterParams.for) {
+        result = result.filter((i) => i.for === filterParams.for);
+      }
+      if (filterParams.brends.length) {
+        result = result.filter((i) => filterParams.brends.includes(i.brend));
+      }
+      if (filterParams.price) {
+        const [from, to] = filterParams.price.split("-");
+        const fromNumber = Number(from) || 0;
+        const toNumber = Number(to) || Infinity;
+
+        result = result.filter((i) => i.price >= fromNumber && i.price <= toNumber);
+      }
+    }
     setCatalogList(result);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filterParams]);
+  }, [filterParams, sortedCatalogList]);
+
+  // список товаров на страницу
+  React.useEffect(() => {
+    if (page > Math.ceil(catalogList.length / perPage))
+      setPage(Math.ceil(catalogList.length / perPage) || 1);
+
+    let result = [...catalogList];
+    result = result.slice((page - 1) * perPage, perPage * page);
+
+    setRenderCatalogList(result);
+  }, [page, catalogList]);
 
   return (
     <div className={styles["catalog-list"]}>
-      {catalogList.length &&
-        catalogList.map((item) => (
-          <CatalogItem item={item} key={item["code"]} />
-        ))}
+      <div className={styles.catalog}>
+        {renderCatalogList.length &&
+          renderCatalogList.map((item) => <CatalogItem item={item} key={item["code"]} />)}
+      </div>
+      <PaginationNumbers
+        onPaginationClick={setPage}
+        perPage={perPage}
+        itemsAmount={catalogList.length}
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur, quam sint
+        alias modi ipsa enim magni aliquid veniam voluptatibus optio est minima sit, dolorum commodi
+        consequuntur recusandae laudantium nemo. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Cupiditate consectetur, quam sint alias modi ipsa enim magni aliquid veniam
+        voluptatibus optio est minima sit, dolorum commodi consequuntur recusandae laudantium nemo.
+      </p>
     </div>
   );
 };

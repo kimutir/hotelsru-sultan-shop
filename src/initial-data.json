@@ -6,7 +6,7 @@
         "size":"300 гр",
         "code":"001",
         "manufacturer":"Производитель 1",
-        "brend":"Копания 1",
+        "brend":"Toyota",
         "description":"Описание товара 1",
         "price":123123,
         "for":"hands"
@@ -18,7 +18,7 @@
         "size":"300 гр",
         "code":"002",
         "manufacturer":"Производитель 1",
-        "brend":"Копания 1",
+        "brend":"Apple",
         "description":"Описание товара 2",
         "price":123123,
         "for":"hands"
@@ -30,7 +30,7 @@
         "size":"300 мл",
         "code":"003",
         "manufacturer":"Производитель 1",
-        "brend":"Копания 1",
+        "brend":"ASOS",
         "description":"Описание товара 3",
         "price":123123,
         "for":"body"
@@ -42,7 +42,7 @@
         "size":"300 гр",
         "code":"004",
         "manufacturer":"Производитель 2",
-        "brend":"Копания 1",
+        "brend":"Lexus",
         "description":"Описание товара 4",
         "price":1123,
         "for":"hands"
@@ -54,7 +54,7 @@
         "size":"300 гр",
         "code":"005",
         "manufacturer":"Производитель 1",
-        "brend":"Копания 1",
+        "brend":"ASOS",
         "description":"Описание товара 5",
         "price":123,
         "for":"hands"
@@ -66,7 +66,7 @@
         "size":"300 мл",
         "code":"006",
         "manufacturer":"Производитель 2",
-        "brend":"Копания 1",
+        "brend":"Toyota",
         "description":"Описание товара 6",
         "price":3123,
         "for":"hands"
@@ -78,7 +78,7 @@
         "size":"300 гр",
         "code":"007",
         "manufacturer":"Производитель 5",
-        "brend":"Копания 7",
+        "brend":"Mazda",
         "description":"Описание товара 7",
         "price":123123,
         "for":"hands"
@@ -90,7 +90,7 @@
         "size":"300 мл",
         "code":"008",
         "manufacturer":"Производитель 8",
-        "brend":"Копания 4",
+        "brend":"ASOS",
         "description":"Описание товара 8",
         "price":123123,
         "for":"hands"
@@ -102,7 +102,7 @@
         "size":"300 мл",
         "code":"009",
         "manufacturer":"Производитель 1",
-        "brend":"Копания 9",
+        "brend":"ASOS",
         "description":"Описание товара 9",
         "price":123123,
         "for":"body"
@@ -114,7 +114,7 @@
         "size":"300 гр",
         "code":"010",
         "manufacturer":"Производитель 10",
-        "brend":"Копания 1",
+        "brend":"Toyota",
         "description":"Описание товара 10",
         "price":99,
         "for":"body"
@@ -126,7 +126,7 @@
         "size":"300 гр",
         "code":"011",
         "manufacturer":"Производитель 3",
-        "brend":"Копания 8",
+        "brend":"Sony",
         "description":"Описание товара 11",
         "price":123123,
         "for":"hands"
@@ -138,7 +138,7 @@
         "size":"300 мл",
         "code":"012",
         "manufacturer":"Производитель 4",
-        "brend":"Копания 1",
+        "brend":"Toyota",
         "description":"Описание товара 12",
         "price":3123,
         "for":"body"
@@ -150,7 +150,7 @@
         "size":"300 гр",
         "code":"013",
         "manufacturer":"Производитель 7",
-        "brend":"Копания 5",
+        "brend":"Mazda",
         "description":"Описание товара 13",
         "price":123123,
         "for":"hands"
@@ -162,7 +162,7 @@
         "size":"300 гр",
         "code":"014",
         "manufacturer":"Производитель 5",
-        "brend":"Копания 2",
+        "brend":"Sony",
         "description":"Описание товара 14",
         "price":4000,
         "for":"body"
@@ -174,7 +174,7 @@
         "size":"300 мл",
         "code":"015",
         "manufacturer":"Производитель 6",
-        "brend":"Копания 4",
+        "brend":"Lexus",
         "description":"Описание товара 15",
         "price":123123,
         "for":"body"
@@ -186,7 +186,7 @@
         "size":"300 гр",
         "code":"016",
         "manufacturer":"Производитель 4",
-        "brend":"Копания 2",
+        "brend":"Lexus",
         "description":"Описание товара 16",
         "price":20000,
         "for":"hands"
@@ -198,7 +198,7 @@
         "size":"300 гр",
         "code":"017",
         "manufacturer":"Производитель 12",
-        "brend":"Копания 1",
+        "brend":"Apple",
         "description":"Описание товара 17",
         "price":123123,
         "for":"hands"
@@ -210,7 +210,7 @@
         "size":"300 мл",
         "code":"018",
         "manufacturer":"Производитель 8",
-        "brend":"Копания 5",
+        "brend":"Sony",
         "description":"Описание товара 18",
         "price":123123,
         "for":"body"

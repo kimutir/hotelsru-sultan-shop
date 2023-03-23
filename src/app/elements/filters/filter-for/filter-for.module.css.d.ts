@@ -1,7 +1,10 @@
 declare namespace FilterForModuleCssNamespace {
   export interface IFilterForModuleCss {
+    "clicked": string;
     "filter": string;
+    "filter-aside": string;
     "filter-item": string;
+    "filter-item-aside": string;
   }
 }
 

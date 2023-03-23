@@ -5,33 +5,78 @@ import styles from "./filter-checkbox.module.css";
 
 interface PropsType {
   title: string;
-  checkboxOptions: { value: string; title: string }[];
+  checkboxOptions: string[];
+  onChange: (value: string) => void;
+  reset: boolean;
+  setReset: (value: boolean) => void;
 }
 
 const FilterCheckbox: React.FC<PropsType> = ({
   title,
   checkboxOptions,
+  onChange,
+  reset,
+  setReset,
 }) => {
+  const [optionsList, setOptionsList] = React.useState<string[]>([]);
+  const [inputValue, setInputValue] = React.useState("");
+  const checkboxWrapper = React.useRef<HTMLDivElement>();
+  const customInput = React.useRef<HTMLFormElement>();
+
+  React.useEffect(() => {
+    setOptionsList(checkboxOptions);
+  }, [checkboxOptions]);
+
+  React.useEffect(() => {
+    if (reset) {
+      if (checkboxWrapper.current) {
+        checkboxWrapper.current.querySelectorAll("input").forEach((i) => (i.checked = false));
+      }
+      if (customInput.current) {
+        (customInput.current.querySelector('input[type="text"]') as HTMLInputElement).value = "";
+      }
+
+      setReset(false);
+    }
+  }, [reset]);
+
+  const onSubmitInput = (searchValue: string | undefined = inputValue) => {
+    setOptionsList(
+      checkboxOptions.filter((i) => {
+        if (searchValue === "") return i;
+        return i.toLocaleLowerCase().includes(searchValue.trim());
+      }),
+    );
+  };
+
   return (
     <div className={styles.filter}>
       <p className={styles.title}>{title}</p>
-      <CustomInput placeholder="Поиск..." icon={searchIcon} />
-      <div className={styles["checkbox-list"]}>
-        {checkboxOptions.map((option) => (
-          <div className={styles.checkbox} key={option.value}>
-            <input
-              id={option.value}
-              type="checkbox"
-              value={option.value}
-            />
-            <label
-              className={styles["checkbox-lable"]}
-              htmlFor={option.value}
-            >
-              {option.title}
-            </label>
-          </div>
-        ))}
+      <CustomInput
+        formRef={customInput}
+        onSubmit={onSubmitInput}
+        onInutChange={setInputValue}
+        placeholder="Поиск..."
+        icon={searchIcon}
+      />
+      <div ref={checkboxWrapper} className={styles["checkbox-list"]}>
+        {optionsList.length ? (
+          optionsList.map((option) => (
+            <div className={styles.checkbox} key={option}>
+              <input
+                id={option}
+                type="checkbox"
+                value={option}
+                onChange={(e) => onChange(e.target.value)}
+              />
+              <label className={styles["checkbox-lable"]} htmlFor={option}>
+                {option}
+              </label>
+            </div>
+          ))
+        ) : (
+          <p className={styles["checkbox-lable"]}>Не найдено</p>
+        )}
       </div>
     </div>
   );
