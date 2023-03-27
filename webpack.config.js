@@ -4,8 +4,9 @@ const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 module.exports = {
   entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
@@ -55,5 +56,6 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, "./dist"),
     },
+    historyApiFallback: true,
   },
 };

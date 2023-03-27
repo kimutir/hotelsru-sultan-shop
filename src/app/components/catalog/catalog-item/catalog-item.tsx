@@ -5,6 +5,7 @@ import { CatalogItemType } from "@store/reducers/reducerCatalog";
 import React from "react";
 import { useAppDispatch } from "@store/hooks";
 import { addToCart } from "@store/reducers/reducerCart";
+import { Link } from "react-router-dom";
 
 interface PropsType {
   item: CatalogItemType;
@@ -13,32 +14,49 @@ interface PropsType {
 const CatalogItem: React.FC<PropsType> = ({ item }) => {
   const dispatch = useAppDispatch();
 
+  const filterOptions = {
+    body: "За телом",
+    hands: "За руками",
+  };
+
   return (
     <div className={styles.item}>
       <div className={styles.image}>
         <img src={item.img} />
       </div>
       <div className={styles.content}>
-        <p className={styles.size}>{item.size}</p>
-        <div className={styles.title}>
-          <strong>{item.title}</strong> {item.description}
-        </div>
+        <p className={styles.size}>{item.size.value}</p>
+        <Link to={`item/${item.code}`}>
+          <div className={styles.title}>
+            <strong>{item.title}</strong> {item.description.small}
+          </div>
+        </Link>
+
         <p className={styles.info}>
           Штрихкод: <span>{item.code}</span>
         </p>
         <p className={styles.info}>
-          Производиткль: <span>{item.manufacturer}</span>
+          Производитель: <span>{item.manufacturer}</span>
         </p>
         <p className={styles.info}>
           Бренд: <span>{item.brend}</span>
         </p>
         <p className={styles.info}>
-          Тип ухода: <span>{item.for === "body" ? "За телом" : "За руками"}</span>
+          Тип ухода:
+          {item.for.map((i) => (
+            <span key={i}>{filterOptions[i]}</span>
+          ))}
         </p>
         <div className={styles.bottom}>
-          <strong>{item.price}</strong>
+          <strong>
+            {Intl.NumberFormat("ru-RU", {
+              style: "currency",
+              currency: "RUB",
+              minimumFractionDigits: 0,
+            }).format(item.price)}
+          </strong>
           <CustomButton
-            onClick={() => dispatch(addToCart(item))}
+            onClick={() => dispatch(addToCart({ item }))}
             text="В корзину"
             icon={cartIcon}
           />

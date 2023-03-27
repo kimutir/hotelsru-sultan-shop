@@ -12,6 +12,7 @@ interface PropsType {
   backgroundColor?: string;
   paddingTop?: string;
   paddingBottom?: string;
+  gap?: string;
 }
 
 const LayoutFlex: React.FC<PropsType> = ({
@@ -26,6 +27,7 @@ const LayoutFlex: React.FC<PropsType> = ({
   backgroundColor,
   paddingTop,
   paddingBottom,
+  gap,
 }) => {
   return (
     <div
@@ -39,11 +41,12 @@ const LayoutFlex: React.FC<PropsType> = ({
     >
       <div
         style={{
+          gap: gap ?? "",
           paddingTop: paddingTop ?? "0",
           paddingBottom: paddingBottom ?? "0",
           marginTop: marginTop ?? "0",
           marginBottom: marginBottom ?? "0",
-          width: width ?? "90%",
+          width: width ?? "1370px",
           display: "flex",
           justifyContent: justifyContent ?? "center",
           flexDirection: flexDirection ?? "row",

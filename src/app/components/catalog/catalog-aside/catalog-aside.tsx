@@ -3,12 +3,12 @@ import FilterCheckbox from "@elements/filters/filter-checkbox/filter-checkbox";
 import CustomButton from "@custom/button/custom-button";
 import trashIcon from "@assets/images/icons/icon-trash-white.png";
 import LayoutFlex from "@layouts/layout-flex";
-import FilterFor from "@elements/filters/filter-for/filter-for";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import React from "react";
 import { changeFilterParams } from "@store/reducers/reducerCatalog";
+import CatalogFilterFor from "@components/catalog/catalog-filter-for/catalog-filter-for";
 
-const MainAsideContainer = () => {
+const CatalogAside = () => {
   const catalog = useAppSelector((state) => state.catalog);
   const dispatch = useAppDispatch();
   const [priceFrom, setPriceFrom] = React.useState("");
@@ -18,7 +18,7 @@ const MainAsideContainer = () => {
 
   const checkboxOptions: string[] = React.useMemo(() => {
     const result = [];
-    catalog.list
+    Object.values(catalog.list)
       .map((i) => i.brend)
       .forEach((i) => {
         if (!result.includes(i)) {
@@ -56,10 +56,10 @@ const MainAsideContainer = () => {
     setPriceTo("");
     setPriceFrom("");
     setSelectedBrends([]);
-    dispatch(changeFilterParams({ price: "", brends: [], for: "" }));
+    dispatch(changeFilterParams({ price: "", brends: [], for: [] }));
   };
   return (
-    <div>
+    <div style={{ minWidth: "350px" }}>
       <FilterPrice
         onInputChangeFrom={setPriceFrom}
         onInputChangeTo={setPriceTo}
@@ -73,13 +73,13 @@ const MainAsideContainer = () => {
         checkboxOptions={checkboxOptions}
         title="Производитель"
       />
-      <LayoutFlex width="100%" justifyContent="space-between" height="auto" marginBottom="50px">
+      <LayoutFlex width="100%" justifyContent="start" height="auto" marginBottom="50px" gap="20px">
         <CustomButton onClick={onConfirmButtonClick} text="Показать" />
         <CustomButton onClick={onTrashButtonClick} isCircle={true} icon={trashIcon} />
       </LayoutFlex>
-      <FilterFor items={filterOptions} isAside={true} />
+      <CatalogFilterFor items={filterOptions} isAside={true} />
     </div>
   );
 };
 
-export default MainAsideContainer;
+export default CatalogAside;

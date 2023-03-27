@@ -9,7 +9,7 @@ interface PropsType {
   isAside?: boolean;
 }
 
-const FilterFor: React.FC<PropsType> = ({ items, isAside }) => {
+const CatalogFilterFor: React.FC<PropsType> = ({ items, isAside }) => {
   const dispatch = useAppDispatch();
   const filter = useAppSelector((state) => state.catalog.filterParams);
 
@@ -20,19 +20,19 @@ const FilterFor: React.FC<PropsType> = ({ items, isAside }) => {
   return (
     <div className={isAside ? styles["filter-aside"] : styles.filter}>
       {items.map((item) => (
-        <div
+        <button
           className={[
             isAside ? styles["filter-item-aside"] : styles["filter-item"],
-            Object.values(filter).includes(item.value) && styles.clicked,
+            filter.for.includes(item.value) && styles.clicked,
           ].join(" ")}
           onClick={() => onFilterItemClick(item)}
           key={item.value}
         >
           <p>{item.title}</p>
-        </div>
+        </button>
       ))}
     </div>
   );
 };
 
-export default FilterFor;
+export default CatalogFilterFor;

@@ -1,6 +1,7 @@
 declare namespace HeaderTopModuleCssNamespace {
   export interface IHeaderTopModuleCss {
     "header-top": string;
+    "header-top-medium": string;
   }
 }
 

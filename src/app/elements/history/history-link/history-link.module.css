@@ -1,0 +1,17 @@
+.not-active {
+    line-height: 120%;
+    color: #3F4E65;
+    text-decoration: none;
+    border-right: 1px dashed #3F4E65;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.active{
+    line-height: 120%;
+    color: #3F4E65;
+    opacity: 0.5;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}

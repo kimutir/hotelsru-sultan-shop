@@ -1,0 +1,30 @@
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.image-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 150%;
+    color: #111111;
+}
+
+.image {
+    width: 664px;
+    height: 471px;
+}
+
+.description-small {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

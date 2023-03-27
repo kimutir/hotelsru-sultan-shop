@@ -1,0 +1,12 @@
+.not-active {
+    line-height: 120%;
+    color: #3F4E65;
+    text-decoration: none;
+    border-right: 1px dashed #3F4E65;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.links-wrapper a:first-child {
+    padding-left: 0;
+}

@@ -48,10 +48,12 @@
 
 .info span {
     color: #111111;
+    margin-left: 5px;
 }
 
 .bottom {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 20px;
 }

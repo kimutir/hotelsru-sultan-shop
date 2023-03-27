@@ -11,75 +11,79 @@ interface PropsType {
   setReset: (value: boolean) => void;
 }
 
-const FilterCheckbox: React.FC<PropsType> = ({
-  title,
-  checkboxOptions,
-  onChange,
-  reset,
-  setReset,
-}) => {
-  const [optionsList, setOptionsList] = React.useState<string[]>([]);
-  const [inputValue, setInputValue] = React.useState("");
-  const checkboxWrapper = React.useRef<HTMLDivElement>();
-  const customInput = React.useRef<HTMLFormElement>();
+// eslint-disable-next-line react/display-name
+const FilterCheckbox: React.FC<PropsType> = React.memo(
+  ({ title, checkboxOptions, onChange, reset, setReset }) => {
+    const [optionsList, setOptionsList] = React.useState<string[]>([]);
+    const [inputValue, setInputValue] = React.useState("");
+    const checkboxWrapper = React.useRef<HTMLDivElement>();
+    const customInput = React.useRef<HTMLFormElement>();
 
-  React.useEffect(() => {
-    setOptionsList(checkboxOptions);
-  }, [checkboxOptions]);
-
-  React.useEffect(() => {
-    if (reset) {
-      if (checkboxWrapper.current) {
-        checkboxWrapper.current.querySelectorAll("input").forEach((i) => (i.checked = false));
+    React.useEffect(() => {
+      if (inputValue) {
+        setOptionsList(
+          checkboxOptions.filter((i) => i.toLocaleLowerCase().includes(inputValue.trim())),
+        );
+      } else {
+        setOptionsList(checkboxOptions);
       }
-      if (customInput.current) {
-        (customInput.current.querySelector('input[type="text"]') as HTMLInputElement).value = "";
+    }, [checkboxOptions]);
+
+    React.useEffect(() => {
+      if (reset) {
+        if (checkboxWrapper.current) {
+          checkboxWrapper.current.querySelectorAll("input").forEach((i) => (i.checked = false));
+        }
+        if (customInput.current) {
+          (customInput.current.querySelector('input[type="text"]') as HTMLInputElement).value = "";
+        }
+        setOptionsList(checkboxOptions);
+
+        setReset(false);
       }
+    }, [reset]);
 
-      setReset(false);
-    }
-  }, [reset]);
+    const onSubmitInput = (searchValue: string | undefined = inputValue) => {
+      setOptionsList(
+        checkboxOptions.filter((i) => {
+          if (searchValue === "") return i;
+          return i.toLocaleLowerCase().includes(searchValue.trim());
+        }),
+      );
+    };
 
-  const onSubmitInput = (searchValue: string | undefined = inputValue) => {
-    setOptionsList(
-      checkboxOptions.filter((i) => {
-        if (searchValue === "") return i;
-        return i.toLocaleLowerCase().includes(searchValue.trim());
-      }),
-    );
-  };
-
-  return (
-    <div className={styles.filter}>
-      <p className={styles.title}>{title}</p>
-      <CustomInput
-        formRef={customInput}
-        onSubmit={onSubmitInput}
-        onInutChange={setInputValue}
-        placeholder="Поиск..."
-        icon={searchIcon}
-      />
-      <div ref={checkboxWrapper} className={styles["checkbox-list"]}>
-        {optionsList.length ? (
-          optionsList.map((option) => (
-            <div className={styles.checkbox} key={option}>
-              <input
-                id={option}
-                type="checkbox"
-                value={option}
-                onChange={(e) => onChange(e.target.value)}
-              />
-              <label className={styles["checkbox-lable"]} htmlFor={option}>
-                {option}
-              </label>
-            </div>
-          ))
-        ) : (
-          <p className={styles["checkbox-lable"]}>Не найдено</p>
-        )}
+    return (
+      <div className={styles.filter}>
+        <p className={styles.title}>{title}</p>
+        <CustomInput
+          formRef={customInput}
+          onSubmit={onSubmitInput}
+          onInutChange={setInputValue}
+          placeholder="Поиск..."
+          icon={searchIcon}
+        />
+        <div ref={checkboxWrapper} className={styles["checkbox-list"]}>
+          {optionsList.length ? (
+            optionsList.map((option) => (
+              <div className={styles.checkbox} key={option}>
+                <input
+                  id={option}
+                  type="checkbox"
+                  value={option}
+                  onChange={(e) => onChange(e.target.value)}
+                />
+                <label className={styles["checkbox-lable"]} htmlFor={option}>
+                  {option}
+                </label>
+              </div>
+            ))
+          ) : (
+            <p className={styles["checkbox-lable"]}>Не найдено</p>
+          )}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  },
+);
 
 export default FilterCheckbox;

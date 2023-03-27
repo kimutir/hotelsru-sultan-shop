@@ -1,7 +1,12 @@
 import HeaderNavLink from "./header-nav-link";
 import styles from "./header-nav.module.css";
+import React from "react";
 
-const HeaderNavList = () => {
+interface PropsType {
+  screen?: "medium" | "small" | "mobile";
+}
+
+const HeaderNavList: React.FC<PropsType> = ({ screen }) => {
   const links = [
     { id: "company-link", title: "О Компании", link: "" },
     {
@@ -14,8 +19,8 @@ const HeaderNavList = () => {
   ];
 
   return (
-    <nav>
-      <ul className={styles["nav-list"]}>
+    <nav className={screen === "medium" ? styles["nav-medium"] : ""}>
+      <ul className={screen === "medium" ? styles["nav-list-medium"] : styles["nav-list"]}>
         {links.map((link) => (
           <HeaderNavLink key={link.id} item={link} />
         ))}

@@ -1,218 +1,200 @@
-[
-    {
+{
+   "001": {
         "img":"https://i.ibb.co/b6c6Lrq/image-21-2.png",
         "title":"Порошок",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"001",
         "manufacturer":"Производитель 1",
         "brend":"Toyota",
-        "description":"Описание товара 1",
-        "price":123123,
-        "for":"hands"
+        "description":{"small":"Описание товара 1","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":4040,
+        "for":["hands","body"]
     },
-    {
+   "002": {
         "img":"https://i.ibb.co/MfcfFwF/image-21-3.png",
         "title":"Зубная паста",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"002",
         "manufacturer":"Производитель 1",
         "brend":"Apple",
-        "description":"Описание товара 2",
-        "price":123123,
-        "for":"hands"
+        "description":{"small":"Описание товара 2","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":598,
+        "for":["hands"]
     },
-    {
+   "003": {
         "img":"https://i.ibb.co/rMN8Q0Z/image-21.png",
         "title":"Мыло",
-        "size-type":"volume",
-        "size":"300 мл",
+        "size":{"value":"300 мл","type":"volume"},
         "code":"003",
         "manufacturer":"Производитель 1",
         "brend":"ASOS",
-        "description":"Описание товара 3",
-        "price":123123,
-        "for":"body"
+        "description":{"small":"Описание товара 3","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":1200,
+        "for":["body"]
     },
-    {
+   "004" :{
         "img":"https://i.ibb.co/b6c6Lrq/image-21-2.png",
         "title":"Шампунь",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"004",
         "manufacturer":"Производитель 2",
         "brend":"Lexus",
-        "description":"Описание товара 4",
+        "description":{"small":"Описание товара 4","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
         "price":1123,
-        "for":"hands"
+        "for":["hands"]
     },
-    {
+   "005": {
         "img":"https://i.ibb.co/MfcfFwF/image-21-3.png",
         "title":"Кондиционер",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"005",
         "manufacturer":"Производитель 1",
         "brend":"ASOS",
-        "description":"Описание товара 5",
+        "description":{"small":"Описание товара 5","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
         "price":123,
-        "for":"hands"
+        "for":["hands","body"]
     },
-    {
+   "006": {
         "img":"https://i.ibb.co/b6c6Lrq/image-21-2.png",
         "title":"Крем",
-        "size-type":"volume",
-        "size":"300 мл",
+        "size":{"value":"300 мл","type":"volume"},
         "code":"006",
         "manufacturer":"Производитель 2",
         "brend":"Toyota",
-        "description":"Описание товара 6",
+        "description":{"small":"Описание товара 6","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
         "price":3123,
-        "for":"hands"
+        "for":["hands"]
     },
-    {
+  "007":  {
         "img":"https://i.ibb.co/rMN8Q0Z/image-21.png",
         "title":"Лосьон",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"007",
         "manufacturer":"Производитель 5",
         "brend":"Mazda",
-        "description":"Описание товара 7",
-        "price":123123,
-        "for":"hands"
+        "description":{"small":"Описание товара 7","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":1223,
+        "for":["hands"]
     },
-    {
+   "008": {
         "img":"https://i.ibb.co/rMN8Q0Z/image-21.png",
         "title":"Пена для бритья",
-        "size-type":"volume",
-        "size":"300 мл",
+        "size":{"value":"300 мл","type":"volume"},
         "code":"008",
         "manufacturer":"Производитель 8",
         "brend":"ASOS",
-        "description":"Описание товара 8",
-        "price":123123,
-        "for":"hands"
+        "description":{"small":"Описание товара 8","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":1223,
+        "for":["hands"]
     },
-    {
+   "009": {
         "img":"https://i.ibb.co/MfcfFwF/image-21-3.png",
         "title":"Жидкий порошок",
-        "size-type":"volume",
-        "size":"300 мл",
+        "size":{"value":"300 мл","type":"volume"},
         "code":"009",
         "manufacturer":"Производитель 1",
         "brend":"ASOS",
-        "description":"Описание товара 9",
-        "price":123123,
-        "for":"body"
+        "description":{"small":"Описание товара 9","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":123,
+        "for":["body"]
     },
-    {
+   "010": {
         "img":"https://i.ibb.co/b6c6Lrq/image-21-2.png",
         "title":"Товар 10",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"010",
         "manufacturer":"Производитель 10",
         "brend":"Toyota",
-        "description":"Описание товара 10",
+        "description":{"small":"Описание товара 10","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
         "price":99,
-        "for":"body"
+        "for":["body"]
     },
-    {
+   "011": {
         "img":"https://i.ibb.co/rMN8Q0Z/image-21.png",
         "title":"Товар 11",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"011",
         "manufacturer":"Производитель 3",
         "brend":"Sony",
-        "description":"Описание товара 11",
-        "price":123123,
-        "for":"hands"
+        "description":{"small":"Описание товара 11","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":3123,
+        "for":["hands"]
     },
-    {
+  "012":  {
         "img":"https://i.ibb.co/MfcfFwF/image-21-3.png",
         "title":"Товар 12",
-        "size-type":"volume",
-        "size":"300 мл",
+        "size":{"value":"300 мл","type":"volume"},
         "code":"012",
         "manufacturer":"Производитель 4",
         "brend":"Toyota",
-        "description":"Описание товара 12",
+        "description":{"small":"Описание товара 12","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
         "price":3123,
-        "for":"body"
+        "for":["body"]
     },
-    {
+   "013": {
         "img":"https://i.ibb.co/b6c6Lrq/image-21-2.png",
         "title":"Товар 13",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"013",
         "manufacturer":"Производитель 7",
         "brend":"Mazda",
-        "description":"Описание товара 13",
-        "price":123123,
-        "for":"hands"
+        "description":{"small":"Описание товара 13","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":1299,
+        "for":["hands"]
     },
-    {
+  "014":  {
         "img":"https://i.ibb.co/MfcfFwF/image-21-3.png",
         "title":"Товар 14",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"014",
         "manufacturer":"Производитель 5",
         "brend":"Sony",
-        "description":"Описание товара 14",
+        "description":{"small":"Описание товара 14","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
         "price":4000,
-        "for":"body"
+        "for":["body"]
     },
-    {
+   "015": {
         "img":"https://i.ibb.co/rMN8Q0Z/image-21.png",
         "title":"Товар 15",
-        "size-type":"volume",
-        "size":"300 мл",
+        "size":{"value":"300 мл","type":"volume"},
         "code":"015",
         "manufacturer":"Производитель 6",
         "brend":"Lexus",
-        "description":"Описание товара 15",
-        "price":123123,
-        "for":"body"
+        "description":{"small":"Описание товара 15","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":883,
+        "for":["body"]
     },
-    {
+   "016": {
         "img":"https://i.ibb.co/b6c6Lrq/image-21-2.png",
         "title":"Товар 16",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"016",
         "manufacturer":"Производитель 4",
         "brend":"Lexus",
-        "description":"Описание товара 16",
-        "price":20000,
-        "for":"hands"
+        "description":{"small":"Описание товара 16","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":1231,
+        "for":["hands"]
     },
-    {
+  "017":  {
         "img":"https://i.ibb.co/MfcfFwF/image-21-3.png",
         "title":"Товар 17",
-        "size-type":"weight",
-        "size":"300 гр",
+        "size":{"value":"300 гр","type":"weight"},
         "code":"017",
         "manufacturer":"Производитель 12",
         "brend":"Apple",
-        "description":"Описание товара 17",
-        "price":123123,
-        "for":"hands"
+        "description":{"small":"Описание товара 17","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":43,
+        "for":["hands"]
     },
-    {
+   "018": {
         "img":"https://i.ibb.co/b6c6Lrq/image-21-2.png",
         "title":"Товар 18",
-        "size-type":"volume",
-        "size":"300 мл",
+        "size":{"value":"300 мл","type":"volume"},
         "code":"018",
         "manufacturer":"Производитель 8",
         "brend":"Sony",
-        "description":"Описание товара 18",
-        "price":123123,
-        "for":"body"
+        "description":{"small":"Описание товара 18","big":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas, sunt accusamusprovident, accusantium odio placeat cum et corrupti beatae sequi vero voluptates suscipit quia,amet debitis mollitia magni! Necessitatibus?"},
+        "price":90,
+        "for":["body"]
     }
-]
+}

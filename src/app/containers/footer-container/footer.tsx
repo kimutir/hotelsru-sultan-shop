@@ -1,7 +1,7 @@
-import FooterAboutSmall from "@elements/footer-about-small/footer-about-small";
-import FooterContacts from "@elements/footer-contacts/footer-contacts";
-import FooterNav from "@elements/footer-nav/footer-nav";
-import FooterPrice from "@elements/footer-price/footer-price";
+import FooterAboutSmall from "@elements/footer/footer-about-small/footer-about-small";
+import FooterContacts from "@elements/footer/footer-contacts/footer-contacts";
+import FooterNav from "@elements/footer/footer-nav/footer-nav";
+import FooterPrice from "@elements/footer/footer-price/footer-price";
 import LayoutFlex from "@layouts/layout-flex";
 
 const Footer = () => {

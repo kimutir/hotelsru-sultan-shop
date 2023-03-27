@@ -1,5 +1,5 @@
-import HeaderContactsList from "@elements/header-contacts/header-contacts-list";
-import HeaderNavList from "@elements/header-nav/header-nav-list";
+import HeaderContactsList from "@elements/header/header-contacts/header-contacts-list";
+import HeaderNavList from "@elements/header/header-nav/header-nav-list";
 import LayoutFlex from "../../../layouts/layout-flex";
 import styles from "./header-top.module.css";
 

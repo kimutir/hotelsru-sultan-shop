@@ -1,0 +1,38 @@
+.button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #111111;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.content-hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+.content {
+    visibility: visible;
+    height: 100%;
+}
+
+.triangle {
+    margin-left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 14px solid #3F4E65;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+

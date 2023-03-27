@@ -1,28 +1,31 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export interface CatalogItemType {
-  "img": string;
-  "title": string;
-  "size-type": string;
-  "size": string;
-  "code": string;
-  "manufacturer": string;
-  "brend": string;
-  "description": string;
-  "price": number;
-  "for": string;
+  img: string;
+  title: string;
+  size: { value: string; type: string };
+  code: string;
+  manufacturer: string;
+  brend: string;
+  description: { small: string; big: string };
+  price: number;
+  for: string[];
+}
+
+export interface CatalogListType {
+  [key: string]: CatalogItemType;
 }
 
 const initialState: {
-  list: CatalogItemType[];
+  list: CatalogListType;
   sortParam: string;
-  filterParams: { price: string; for: string; brends: string[] };
+  filterParams: { price: string; for: string[]; brends: string[] };
   perPage: number;
   currentPage: number;
 } = {
-  list: [],
+  list: {},
   sortParam: "",
-  filterParams: { price: "", for: "", brends: [] },
+  filterParams: { price: "", for: [], brends: [] },
   perPage: 12,
   currentPage: 1,
 };
@@ -31,18 +34,25 @@ export const catalogSlice = createSlice({
   name: "catalog",
   initialState,
   reducers: {
-    loadCatalog: (state, action: PayloadAction<CatalogItemType[]>) => {
+    loadCatalog: (state, action: PayloadAction<CatalogListType>) => {
       state.list = action.payload;
     },
     changeSortParam: (state, action: PayloadAction<string>) => {
       state.sortParam = action.payload;
     },
-    changeFilterParams: (
-      state,
-      action: PayloadAction<{ [key: string]: string | number | string[] }>,
-    ) => {
+    changeFilterParams: (state, action: PayloadAction<{ [key: string]: string | string[] }>) => {
       for (const key in action.payload) {
-        state.filterParams[key] = action.payload[key];
+        if (key === "for" && !Array.isArray(action.payload["for"])) {
+          if (state.filterParams["for"].includes(action.payload["for"])) {
+            state.filterParams["for"] = state.filterParams["for"].filter(
+              (i) => i !== action.payload["for"],
+            );
+          } else {
+            state.filterParams["for"].push(action.payload["for"]);
+          }
+        } else {
+          state.filterParams[key] = action.payload[key];
+        }
       }
     },
   },

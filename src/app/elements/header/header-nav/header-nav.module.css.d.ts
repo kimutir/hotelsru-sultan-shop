@@ -2,6 +2,8 @@ declare namespace HeaderNavModuleCssNamespace {
   export interface IHeaderNavModuleCss {
     "nav-item": string;
     "nav-list": string;
+    "nav-list-medium": string;
+    "nav-medium": string;
   }
 }
 

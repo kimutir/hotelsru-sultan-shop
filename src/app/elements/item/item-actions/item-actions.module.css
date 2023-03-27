@@ -1,0 +1,23 @@
+.actions {
+    display: flex;
+    gap: 20px;
+}
+
+.actions  button {
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.15);
+    border-radius: 10px;
+    padding: 20px 30px;
+    color: #3F4E65;
+}
+
+.price {
+    font-weight: 600;
+}
+
+.price-list {
+    font-weight: 700;
+    margin-right: 10px;
+}

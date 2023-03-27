@@ -2,6 +2,7 @@ import cartIcon from "@assets/images/icons/icon-cart.png";
 import styles from "./header-cart.module.css";
 import { useAppSelector } from "@store/hooks";
 import getTotalIncart from "@utils/getTotalInCart";
+import { Link } from "react-router-dom";
 
 const HeaderCart = () => {
   const cart = useAppSelector((state) => state.cart.items);
@@ -15,8 +16,16 @@ const HeaderCart = () => {
         <div className={styles["cart-amount"]}>{total.amount}</div>
       </div>
       <div>
-        <p className={styles["cart-title"]}>Козина</p>
-        <p className={styles["cart-total"]}>{total.price}</p>
+        <Link to="cart">
+          <p className={styles["cart-title"]}>Козина</p>
+        </Link>
+        <p className={styles["cart-total"]}>
+          {Intl.NumberFormat("ru-RU", {
+            style: "currency",
+            currency: "RUB",
+            minimumFractionDigits: 0,
+          }).format(total.price)}
+        </p>
       </div>
     </div>
   );

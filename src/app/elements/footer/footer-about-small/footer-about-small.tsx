@@ -7,7 +7,7 @@ import styles from "./footer-about-small.module.css";
 const FooterAboutSmall = () => {
   return (
     <div className={styles.about}>
-      <img className={styles.logo} src={logo} alt="" />
+      <img className={styles.logo} src={logo} alt="Султан" />
       <p className={styles.text}>
         Компания «Султан» — снабжаем розничные магазины товарами "под ключ" в Кокчетаве и
         Акмолинской области

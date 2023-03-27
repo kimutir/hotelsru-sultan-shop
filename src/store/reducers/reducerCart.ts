@@ -1,33 +1,49 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { CatalogItemType } from "./reducerCatalog";
-import isInCart from "../../app/utils/isInCart";
+
+export interface CartItemType {
+  info: CatalogItemType;
+  amount: number;
+}
+
+export interface CartListType {
+  [key: string]: CartItemType;
+}
 
 const initialState: {
-  items: { info: CatalogItemType; amount: number }[];
+  items: CartListType;
 } = {
-  items: [],
+  items: {},
 };
 
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart: (state, action: PayloadAction<CatalogItemType>) => {
-      const inCart = isInCart({ item: action.payload, itemList: state.items });
-      if (inCart) {
-        for (const item of state.items) {
-          if (item.info.code === action.payload.code) {
-            item.amount += 1;
-            break;
-          }
-        }
+    addToCart: (state, action: PayloadAction<{ item: CatalogItemType; amount?: number }>) => {
+      const cartItem = state.items[action.payload.item.code];
+      if (cartItem) {
+        state.items[cartItem.info.code].amount += action.payload.amount ?? 1;
       } else {
-        state.items.push({ info: action.payload, amount: 1 });
+        state.items[action.payload.item.code] = {
+          info: action.payload.item,
+          amount: action.payload.amount ?? 1,
+        };
       }
+    },
+    removeFromCart: (state, action: PayloadAction<string>) => {
+      if (state.items[action.payload].amount > 1) {
+        state.items[action.payload].amount -= 1;
+      } else {
+        delete state.items[action.payload];
+      }
+    },
+    removeFromCartFully: (state, action: PayloadAction<string>) => {
+      delete state.items[action.payload];
     },
   },
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, removeFromCartFully } = cartSlice.actions;
 
 export default cartSlice.reducer;

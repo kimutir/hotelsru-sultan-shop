@@ -11,7 +11,7 @@ const CatalogList = () => {
   const sortParam = useAppSelector((state) => state.catalog.sortParam);
   const filterParams = useAppSelector((state) => state.catalog.filterParams);
 
-  const [catalogList, setCatalogList] = React.useState<CatalogItemType[]>(catalog);
+  const [catalogList, setCatalogList] = React.useState<CatalogItemType[]>(Object.values(catalog));
   const [sortedCatalogList, setSortedCatalogList] = React.useState<CatalogItemType[]>([]);
   const [renderCatalogList, setRenderCatalogList] = React.useState<CatalogItemType[]>([]);
 
@@ -20,7 +20,7 @@ const CatalogList = () => {
 
   // сортировка списка товаров
   React.useEffect(() => {
-    let result = [...catalog];
+    let result = [...Object.values(catalog)];
     const [value, direction] = sortParam.split("-");
     if (direction === "down") {
       result.sort((a, b) => (a[value] > b[value] ? -1 : 1));
@@ -46,8 +46,10 @@ const CatalogList = () => {
         })
         .includes(true)
     ) {
-      if (filterParams.for) {
-        result = result.filter((i) => i.for === filterParams.for);
+      if (filterParams.for.length) {
+        for (const filterParam of filterParams.for) {
+          result = result.filter((i) => i.for.includes(filterParam));
+        }
       }
       if (filterParams.brends.length) {
         result = result.filter((i) => filterParams.brends.includes(i.brend));
@@ -77,8 +79,9 @@ const CatalogList = () => {
   return (
     <div className={styles["catalog-list"]}>
       <div className={styles.catalog}>
-        {renderCatalogList.length &&
-          renderCatalogList.map((item) => <CatalogItem item={item} key={item["code"]} />)}
+        {renderCatalogList.length
+          ? renderCatalogList.map((item) => <CatalogItem item={item} key={item["code"]} />)
+          : "Не найдено"}
       </div>
       <PaginationNumbers
         onPaginationClick={setPage}

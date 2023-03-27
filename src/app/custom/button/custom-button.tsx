@@ -8,9 +8,9 @@ interface PropsType {
   onClick?: () => void;
 }
 
-const CustomButton: React.FC<PropsType> = ({ text, icon, isCircle, onClick }) => {
+const CustomButton: React.FC<PropsType> = ({ text, icon, onClick }) => {
   return (
-    <button onClick={onClick} className={isCircle ? styles["button-round"] : styles.button}>
+    <button onClick={onClick} className={!text ? styles["button-round"] : styles.button}>
       <div className={styles["button-content"]}>
         {text && text}
         {icon && <img className={styles["button-icon"]} src={icon} />}

@@ -8,14 +8,17 @@ import CustomInput from "@custom/input/custom-input";
 import styles from "./header-bottom.module.css";
 import HeaderCart from "@components/header-cart/header-cart";
 import LayoutFlex from "@layouts/layout-flex";
-import HeaderManager from "@elements/header-manager/header-manager";
+import HeaderManager from "@elements/header/header-manager/header-manager";
+import { useNavigate } from "react-router-dom";
 
 const HeaderBottom = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles["header-bottom"]}>
       <LayoutFlex justifyContent="space-between">
         <img src={logo} alt="" />
-        <CustomButton text="Каталог" icon={catalogIcon} />
+        <CustomButton onClick={() => navigate("/")} text="Каталог" icon={catalogIcon} />
         <CustomInput placeholder="Поиск..." icon={searchIcon} />
         <HeaderManager img={managerPhoto} />
         <CustomButton text="Прайс-лист" icon={downloadIcon} />

@@ -1,0 +1,17 @@
+.list {
+    list-style: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    color: #3F4E65;
+}
+
+.list span {
+    font-weight: 500;
+    color: #111111;
+    margin-left: 10px;
+}
+
+.list li {
+    margin-bottom: 10px;
+}

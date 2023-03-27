@@ -1,10 +1,21 @@
 .nav-list {
     list-style: none;
-    font-family: 'Inter';
     font-size: 14px;
     line-height: 150%;
     display: flex;
     gap: 4rem;
+}
+.nav-list-medium {
+    list-style: none;
+    font-size: 14px;
+    line-height: 150%;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-evenly;
+}
+
+.nav-medium {
+    width: 100%;
 }
 
 .nav-item {
