@@ -8,14 +8,14 @@ interface PropsType {
 
 const HeaderNavList: React.FC<PropsType> = ({ screen }) => {
   const links = [
-    { id: "company-link", title: "О Компании", link: "" },
+    { id: "admin-page", title: "АДМИНКА", link: "/admin" },
     {
       id: "delivery-link",
       title: "Доставка и Оплата",
-      link: "",
+      link: "/",
     },
-    { id: "back-link", title: "Возврат", link: "" },
-    { id: "contacts-link", title: "Контакты", link: "" },
+    { id: "back-link", title: "Возврат", link: "/" },
+    { id: "contacts-link", title: "Контакты", link: "/" },
   ];
 
   return (

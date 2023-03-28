@@ -5,10 +5,12 @@ import { useMediaQuery } from "react-responsive";
 import HeaderMedium from "@containers/header-container/header-medium";
 import FooterMedium from "@containers/footer-container/footer-medium";
 import FooterSmall from "@containers/footer-container/footer-small";
+import HeaderSmall from "@containers/header-container/header-small";
 
 const PageContainer = () => {
   const isBigScreen = useMediaQuery({ minWidth: 1401 });
   const isMediumScreen = useMediaQuery({ minWidth: 800, maxWidth: 1400 });
+  const isSmallScreenList = useMediaQuery({ minWidth: 800, maxWidth: 1059 });
   const isSmallScreen = useMediaQuery({ maxWidth: 799 });
   return (
     <div
@@ -20,10 +22,10 @@ const PageContainer = () => {
     >
       {isBigScreen && <Header />}
       {isMediumScreen && <HeaderMedium />}
-      {isSmallScreen && <HeaderMedium />}
+      {isSmallScreen && <HeaderSmall />}
 
       <div style={{ flex: "1 0 auto" }}>
-        <Outlet context={{ isBigScreen, isMediumScreen, isSmallScreen }} />
+        <Outlet context={{ isBigScreen, isMediumScreen, isSmallScreen, isSmallScreenList }} />
       </div>
 
       {isBigScreen && <Footer />}

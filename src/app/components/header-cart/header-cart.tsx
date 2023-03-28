@@ -1,8 +1,8 @@
-import cartIcon from "@assets/images/icons/icon-cart.png";
 import styles from "./header-cart.module.css";
 import { useAppSelector } from "@store/hooks";
 import getTotalIncart from "@utils/getTotalInCart";
 import { Link } from "react-router-dom";
+import HeaderCartIcon from "./header-cart-icon/header-cart-icon";
 
 const HeaderCart = () => {
   const cart = useAppSelector((state) => state.cart.items);
@@ -11,10 +11,7 @@ const HeaderCart = () => {
 
   return (
     <div className={styles["cart-wrapper"]}>
-      <div className={styles.cart}>
-        <img src={cartIcon} alt="" />
-        <div className={styles["cart-amount"]}>{total.amount}</div>
-      </div>
+      <HeaderCartIcon />
       <div>
         <Link to="cart">
           <p className={styles["cart-title"]}>Козина</p>

@@ -35,4 +35,6 @@
     transform: rotate(180deg);
 }
 
-
+.hidden-content-wrapper-small {
+    width: 295px;
+}

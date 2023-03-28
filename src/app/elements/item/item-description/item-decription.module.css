@@ -10,6 +10,18 @@
     display: flex;
     justify-content: center;
 }
+.content-wrapper-small {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+.image-wrapper-small {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
 
 .title {
     font-weight: 800;
@@ -23,8 +35,17 @@
     height: 471px;
 }
 
+.image-small {
+    width: 100%;
+    /* width:250px;
+    height: 180px; */
+}
+
 .description-small {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.description-small p span {
+    margin-left: 5px;
 }

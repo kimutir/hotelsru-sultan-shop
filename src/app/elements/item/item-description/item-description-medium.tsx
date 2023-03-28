@@ -12,14 +12,9 @@ interface PropsType {
   onAddToCart: (value: number) => void;
 }
 
-const ItemDescription: React.FC<PropsType> = ({ item, onAddToCart }) => {
+const ItemDescriptionMedium: React.FC<PropsType> = ({ item, onAddToCart }) => {
   return (
-    <LayoutFlex
-      justifyContent="space-between"
-      alignItems="top"
-      marginTop="50px"
-      marginBottom="50px"
-    >
+    <LayoutFlex marginTop="50px" marginBottom="50px" flexDirection="column">
       <div className={styles["image-wrapper"]}>
         <img className={styles.image} src="https://i.ibb.co/JzsDkZZ/image-22.png" alt="" />
       </div>
@@ -49,4 +44,4 @@ const ItemDescription: React.FC<PropsType> = ({ item, onAddToCart }) => {
   );
 };
 
-export default ItemDescription;
+export default ItemDescriptionMedium;

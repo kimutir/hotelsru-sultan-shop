@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./hidden-content.module.css";
 
-const HiddenContent = ({ children, title }) => {
+interface PropsType {
+  children: any;
+  title: string;
+  screen?: "small";
+}
+
+const HiddenContent: React.FC<PropsType> = ({ children, title, screen }) => {
   const contentRef = React.useRef<HTMLDivElement>();
   const triangleRef = React.useRef<HTMLSpanElement>();
 
@@ -11,7 +17,7 @@ const HiddenContent = ({ children, title }) => {
   };
 
   return (
-    <div>
+    <div className={screen === "small" ? styles["hidden-content-wrapper-small"] : ""}>
       <button onClick={onButtonClick} className={styles.button}>
         {title}
         <span ref={triangleRef} className={styles.triangle}></span>

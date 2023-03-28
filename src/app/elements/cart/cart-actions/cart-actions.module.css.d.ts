@@ -3,6 +3,7 @@ declare namespace CartActionsModuleCssNamespace {
     "actions": string;
     "cart-button": string;
     "cart-wrapper": string;
+    "cart-wrapper-small": string;
     "price": string;
   }
 }

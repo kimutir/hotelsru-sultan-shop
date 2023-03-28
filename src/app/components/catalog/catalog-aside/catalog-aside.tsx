@@ -1,3 +1,4 @@
+import styles from "./catalog-aside.module.css";
 import FilterPrice from "@elements/filters/filter-price/filter-price";
 import FilterCheckbox from "@elements/filters/filter-checkbox/filter-checkbox";
 import CustomButton from "@custom/button/custom-button";
@@ -8,7 +9,12 @@ import React from "react";
 import { changeFilterParams } from "@store/reducers/reducerCatalog";
 import CatalogFilterFor from "@components/catalog/catalog-filter-for/catalog-filter-for";
 
-const CatalogAside = () => {
+interface PropsType {
+  top?: string;
+  left?: string;
+}
+
+const CatalogAside: React.FC<PropsType> = ({ top, left }) => {
   const catalog = useAppSelector((state) => state.catalog);
   const dispatch = useAppDispatch();
   const [priceFrom, setPriceFrom] = React.useState("");
@@ -59,25 +65,36 @@ const CatalogAside = () => {
     dispatch(changeFilterParams({ price: "", brends: [], for: [] }));
   };
   return (
-    <div style={{ minWidth: "350px" }}>
-      <FilterPrice
-        onInputChangeFrom={setPriceFrom}
-        onInputChangeTo={setPriceTo}
-        reset={resetCheckbox}
-        setReset={setResetCheckbox}
-      />
-      <FilterCheckbox
-        reset={resetCheckbox}
-        setReset={setResetCheckbox}
-        onChange={onCheckboxClick}
-        checkboxOptions={checkboxOptions}
-        title="Производитель"
-      />
-      <LayoutFlex width="100%" justifyContent="start" height="auto" marginBottom="50px" gap="20px">
-        <CustomButton onClick={onConfirmButtonClick} text="Показать" />
-        <CustomButton onClick={onTrashButtonClick} isCircle={true} icon={trashIcon} />
-      </LayoutFlex>
-      <CatalogFilterFor items={filterOptions} isAside={true} />
+    <div
+      style={{ top: top ?? "0", left: left ?? "0" }}
+      className={top && styles["aside-wrapper-small"]}
+    >
+      <div>
+        <FilterPrice
+          onInputChangeFrom={setPriceFrom}
+          onInputChangeTo={setPriceTo}
+          reset={resetCheckbox}
+          setReset={setResetCheckbox}
+        />
+        <FilterCheckbox
+          reset={resetCheckbox}
+          setReset={setResetCheckbox}
+          onChange={onCheckboxClick}
+          checkboxOptions={checkboxOptions}
+          title="Производитель"
+        />
+        <LayoutFlex
+          width="100%"
+          justifyContent="start"
+          height="auto"
+          marginBottom="50px"
+          gap="20px"
+        >
+          <CustomButton onClick={onConfirmButtonClick} text="Показать" />
+          <CustomButton onClick={onTrashButtonClick} isCircle={true} icon={trashIcon} />
+        </LayoutFlex>
+        <CatalogFilterFor items={filterOptions} isAside={true} />
+      </div>
     </div>
   );
 };

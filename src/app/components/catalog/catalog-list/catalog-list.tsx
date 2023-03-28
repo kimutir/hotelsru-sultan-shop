@@ -6,7 +6,11 @@ import styles from "./catalog-list.module.css";
 import { CatalogItemType } from "@store/reducers/reducerCatalog";
 import PaginationNumbers from "@elements/pagination/pagination-numbers";
 
-const CatalogList = () => {
+interface PropsType {
+  screen?: "medium" | "small" | "big" | "small-list";
+}
+
+const CatalogList: React.FC<PropsType> = ({ screen }) => {
   const catalog = useAppSelector((state) => state.catalog.list);
   const sortParam = useAppSelector((state) => state.catalog.sortParam);
   const filterParams = useAppSelector((state) => state.catalog.filterParams);
@@ -77,8 +81,16 @@ const CatalogList = () => {
   }, [page, catalogList]);
 
   return (
-    <div className={styles["catalog-list"]}>
-      <div className={styles.catalog}>
+    <div
+      className={
+        screen === "medium"
+          ? styles["catalog-list-meduim"]
+          : screen === "small" || screen === "small-list"
+          ? styles["catalog-list-small"]
+          : styles["catalog-list"]
+      }
+    >
+      <div className={!screen.includes("small") ? styles.catalog : styles["catalog-small"]}>
         {renderCatalogList.length
           ? renderCatalogList.map((item) => <CatalogItem item={item} key={item["code"]} />)
           : "Не найдено"}
@@ -88,7 +100,7 @@ const CatalogList = () => {
         perPage={perPage}
         itemsAmount={catalogList.length}
       />
-      <p>
+      <p className={styles["catalog-list-description"]}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur, quam sint
         alias modi ipsa enim magni aliquid veniam voluptatibus optio est minima sit, dolorum commodi
         consequuntur recusandae laudantium nemo. Lorem ipsum dolor sit amet consectetur adipisicing

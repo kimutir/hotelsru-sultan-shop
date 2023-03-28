@@ -3,8 +3,10 @@ declare namespace CartItemModuleCssNamespace {
     "image-container": string;
     "img": string;
     "item-content": string;
+    "item-content-small": string;
     "item-description": string;
     "item-wrapper": string;
+    "item-wrapper-small": string;
     "last-item": string;
   }
 }

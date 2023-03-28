@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./header-nav.module.css";
+import { NavLink } from "react-router-dom";
 
 interface PropsType {
   item: { id: string; title: string; link: string };
@@ -8,9 +9,9 @@ interface PropsType {
 const HeaderNavLink: React.FC<PropsType> = ({ item }) => {
   return (
     <li>
-      <a className={styles["nav-item"]} href={item.link}>
+      <NavLink to={item.link} className={styles["nav-item"]}>
         {item.title}
-      </a>
+      </NavLink>
     </li>
   );
 };

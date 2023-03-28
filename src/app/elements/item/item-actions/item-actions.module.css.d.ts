@@ -1,6 +1,7 @@
 declare namespace ItemActionsModuleCssNamespace {
   export interface IItemActionsModuleCss {
     "actions": string;
+    "actions-small": string;
     "price": string;
     "price-list": string;
   }

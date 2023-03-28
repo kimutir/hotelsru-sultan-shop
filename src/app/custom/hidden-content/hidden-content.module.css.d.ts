@@ -3,6 +3,7 @@ declare namespace HiddenContentModuleCssNamespace {
     "button": string;
     "content": string;
     "content-hidden": string;
+    "hidden-content-wrapper-small": string;
     "rotated": string;
     "triangle": string;
   }

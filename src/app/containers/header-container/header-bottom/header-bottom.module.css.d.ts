@@ -1,6 +1,8 @@
 declare namespace HeaderBottomModuleCssNamespace {
   export interface IHeaderBottomModuleCss {
+    "border": string;
     "header-bottom": string;
+    "header-bottom-small": string;
   }
 }
 

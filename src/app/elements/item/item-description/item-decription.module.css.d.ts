@@ -1,9 +1,12 @@
 declare namespace ItemDecriptionModuleCssNamespace {
   export interface IItemDecriptionModuleCss {
     "content-wrapper": string;
+    "content-wrapper-small": string;
     "description-small": string;
     "image": string;
+    "image-small": string;
     "image-wrapper": string;
+    "image-wrapper-small": string;
     "title": string;
   }
 }

@@ -21,7 +21,7 @@ const CatalogSort: React.FC<PropsType> = ({ screen }) => {
   ];
   return (
     <LayoutFlex
-      justifyContent="flex-end"
+      justifyContent={screen !== "small" ? "flex-end" : undefined}
       marginTop="10px"
       width={screen === "medium" ? "90%" : undefined}
     >

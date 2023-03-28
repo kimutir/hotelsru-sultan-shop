@@ -9,12 +9,13 @@ import { PageSizesType } from "@containers/page-container/types";
 import CatalogSort from "@components/catalog/catalog-sort/catalog-sort";
 import CatalogFilterFor from "@components/catalog/catalog-filter-for/catalog-filter-for";
 import CatalogAside from "@components/catalog/catalog-aside/catalog-aside";
+import HiddenContent from "@custom/hidden-content/hidden-content";
 
 const CatalogMain = () => {
   const dispatch = useAppDispatch();
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { isBigScreen, isMediumScreen, isSmallScreen } = useOutletContext<PageSizesType>();
+  const { isBigScreen, isMediumScreen, isSmallScreen, isSmallScreenList } =
+    useOutletContext<PageSizesType>();
 
   React.useEffect(() => {
     dispatch(changeSortParam("title-up"));
@@ -40,13 +41,39 @@ const CatalogMain = () => {
         </LayoutFlex>
       )}
 
+      {isSmallScreen && (
+        <LayoutFlex width="90%" marginTop="40px">
+          <HiddenContent title="ПОДБОР ПО ПАРАМЕТРАМ" screen="small">
+            <CatalogFilterFor items={filterOptions} isAside={true} />
+          </HiddenContent>
+        </LayoutFlex>
+      )}
+
       <CatalogSort screen={isMediumScreen ? "medium" : isSmallScreen ? "small" : "big"} />
-      <LayoutFlex justifyContent="start" width={!isBigScreen ? "90%" : undefined}>
-        <CatalogFilterFor items={filterOptions} />
-      </LayoutFlex>
-      <LayoutFlex alignItems="top" justifyContent="space-between">
-        <CatalogAside />
-        <CatalogList />
+      {!isSmallScreen && (
+        <LayoutFlex justifyContent="start" width={!isBigScreen ? "90%" : undefined}>
+          <CatalogFilterFor items={filterOptions} />
+        </LayoutFlex>
+      )}
+
+      <LayoutFlex
+        alignItems="top"
+        justifyContent="space-between"
+        gap="20px"
+        width={!isBigScreen ? "90%" : undefined}
+      >
+        {!isSmallScreen && <CatalogAside />}
+        <CatalogList
+          screen={
+            isMediumScreen && !isSmallScreenList
+              ? "medium"
+              : isSmallScreenList && isMediumScreen
+              ? "small-list"
+              : isSmallScreen
+              ? "small"
+              : "big"
+          }
+        />
       </LayoutFlex>
     </>
   );

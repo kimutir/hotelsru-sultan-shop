@@ -3,6 +3,11 @@
     align-items: center;
     gap: 50px;
 }
+.cart-wrapper-small {
+    display: flex;
+    align-items: center;
+    width: 290px;
+}
 
 .price {
     display: flex;
