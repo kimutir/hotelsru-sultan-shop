@@ -5,7 +5,7 @@ import LayoutFlex from "@layouts/layout-flex";
 import styles from "./cart-list.module.css";
 
 interface PropsType {
-  screen?: "medium";
+  screen?: "medium" | "small";
 }
 
 const CartList: React.FC<PropsType> = ({ screen }) => {

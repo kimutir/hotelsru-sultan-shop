@@ -12,11 +12,11 @@ interface PropsType {
 const ItemCart: React.FC<PropsType> = ({ item, onAddToCart }) => {
   const [itemsAmount, setItemsAmount] = React.useState(1);
 
-  const onHandleAddToCart = React.useCallback(() => {
+  const onHandleAddToCart = () => {
     if (itemsAmount === 0) return;
     onAddToCart(itemsAmount);
     setItemsAmount(1);
-  }, [itemsAmount]);
+  };
 
   return (
     <div className={styles["cart-wrapper"]}>
@@ -25,7 +25,7 @@ const ItemCart: React.FC<PropsType> = ({ item, onAddToCart }) => {
           style: "currency",
           currency: "RUB",
           minimumFractionDigits: 0,
-        }).format(item.price * itemsAmount)}
+        }).format(item?.price * itemsAmount)}
       </p>
       <div className={styles.actions}>
         <button

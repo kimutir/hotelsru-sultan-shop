@@ -41,9 +41,12 @@ export const cartSlice = createSlice({
     removeFromCartFully: (state, action: PayloadAction<string>) => {
       delete state.items[action.payload];
     },
+    resetCart: (state) => {
+      state.items = {};
+    },
   },
 });
 
-export const { addToCart, removeFromCart, removeFromCartFully } = cartSlice.actions;
+export const { addToCart, removeFromCart, removeFromCartFully, resetCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

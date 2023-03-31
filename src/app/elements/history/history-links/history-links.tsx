@@ -1,6 +1,7 @@
 import React from "react";
 import HistoryLink from "../history-link/history-link";
 import styles from "./history-links.module.css";
+import { NavLink } from "react-router-dom";
 
 interface PropsType {
   data: { link: string; title: string }[];
@@ -9,9 +10,9 @@ interface PropsType {
 const HistoryLinks: React.FC<PropsType> = ({ data }) => {
   return (
     <div className={styles["links-wrapper"]}>
-      <a className={styles["not-active"]} href="#">
+      <NavLink className={styles["not-active"]} to="/">
         Главная
-      </a>
+      </NavLink>
       {data.map((item, index) => (
         <HistoryLink item={item} key={index} />
       ))}

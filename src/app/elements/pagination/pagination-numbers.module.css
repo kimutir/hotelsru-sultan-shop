@@ -1,10 +1,25 @@
 .pagination {
     display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-right: 50px;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 1rem;   
+    align-items: center;  
+}
+
+.pagination img {
+    cursor: pointer;
 }
 
 .pagination-item {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+}
+
+.active {
+    background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
 }

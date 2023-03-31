@@ -14,19 +14,37 @@ const ItemPage = () => {
   const { itemCode } = useLoaderData() as { itemCode: string };
   const dispatch = useAppDispatch();
   const catalog = useAppSelector((state) => state.catalog.list);
+  const [finalCatalog, setFinalCatalog] = React.useState({});
 
   const { isBigScreen, isMediumScreen, isSmallScreen } = useOutletContext<PageSizesType>();
 
+  React.useEffect(() => {
+    let inititalCatalog = { ...catalog };
+    const catalogListFromLocalStorageJSON = localStorage.getItem("sultan-store-kim");
+    const removedItemsJSON = localStorage.getItem("sultan-store-kim-deleted");
+    const catalogFromLS = JSON.parse(catalogListFromLocalStorageJSON);
+    for (const itemFromLS in catalogFromLS) {
+      inititalCatalog[itemFromLS] = JSON.parse(catalogFromLS[itemFromLS]);
+    }
+    for (const catalogCode in inititalCatalog) {
+      if (removedItemsJSON?.length && JSON.parse(removedItemsJSON).includes(catalogCode)) {
+        delete inititalCatalog[catalogCode];
+      }
+    }
+
+    setFinalCatalog(inititalCatalog);
+  }, [catalog, itemCode]);
+
   const onAddToCart = React.useCallback(
     (amount: number) => {
-      dispatch(addToCart({ item: catalog[itemCode], amount }));
+      dispatch(addToCart({ item: finalCatalog[itemCode], amount }));
     },
-    [itemCode],
+    [catalog, finalCatalog, itemCode],
   );
 
   const historyData = [
     { link: "/", title: "Каталог" },
-    { link: `/item/${itemCode}`, title: catalog[itemCode].title },
+    { link: `/item/${itemCode}`, title: finalCatalog[itemCode]?.title },
   ];
 
   return (
@@ -40,11 +58,13 @@ const ItemPage = () => {
           <HistoryLinks data={historyData} />
         </LayoutFlex>
       )}
-      {isBigScreen && <ItemDescription onAddToCart={onAddToCart} item={catalog[itemCode]} />}
+      {isBigScreen && <ItemDescription onAddToCart={onAddToCart} item={finalCatalog[itemCode]} />}
       {isMediumScreen && (
-        <ItemDescriptionMedium onAddToCart={onAddToCart} item={catalog[itemCode]} />
+        <ItemDescriptionMedium onAddToCart={onAddToCart} item={finalCatalog[itemCode]} />
       )}
-      {isSmallScreen && <ItemDescriptionSmall onAddToCart={onAddToCart} item={catalog[itemCode]} />}
+      {isSmallScreen && (
+        <ItemDescriptionSmall onAddToCart={onAddToCart} item={finalCatalog[itemCode]} />
+      )}
     </>
   );
 };

@@ -22,9 +22,31 @@ const CatalogList: React.FC<PropsType> = ({ screen }) => {
   const [page, setPage] = React.useState(1);
   const perPage = 12;
 
+  const callbacks = {
+    nextPage: React.useCallback(() => {
+      const calculatedPages = Math.ceil(sortedCatalogList.length / perPage);
+      if (page < calculatedPages) setPage((prev) => ++prev);
+    }, [sortedCatalogList, page]),
+    prevPage: React.useCallback(() => {
+      if (page > 1) setPage((prev) => (prev -= 1));
+    }, [sortedCatalogList, page]),
+  };
+
   // сортировка списка товаров
   React.useEffect(() => {
-    let result = [...Object.values(catalog)];
+    let inititalCatalog = { ...catalog };
+    const catalogListFromLocalStorageJSON = localStorage.getItem("sultan-store-kim");
+    const removedItemsJSON = localStorage.getItem("sultan-store-kim-deleted");
+    const catalogFromLS = JSON.parse(catalogListFromLocalStorageJSON);
+    for (const itemFromLS in catalogFromLS) {
+      inititalCatalog[itemFromLS] = JSON.parse(catalogFromLS[itemFromLS]);
+    }
+    for (const catalogCode in inititalCatalog) {
+      if (removedItemsJSON?.length && JSON.parse(removedItemsJSON).includes(catalogCode)) {
+        delete inititalCatalog[catalogCode];
+      }
+    }
+    let result = [...Object.values(inititalCatalog)];
     const [value, direction] = sortParam.split("-");
     if (direction === "down") {
       result.sort((a, b) => (a[value] > b[value] ? -1 : 1));
@@ -96,6 +118,9 @@ const CatalogList: React.FC<PropsType> = ({ screen }) => {
           : "Не найдено"}
       </div>
       <PaginationNumbers
+        nextPage={callbacks.nextPage}
+        prevPage={callbacks.prevPage}
+        currentPage={page}
         onPaginationClick={setPage}
         perPage={perPage}
         itemsAmount={catalogList.length}

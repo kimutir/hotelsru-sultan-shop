@@ -10,19 +10,19 @@ const ItemCharacteristics: React.FC<PropsType> = ({ item }) => {
   return (
     <ul className={styles.list}>
       <li>
-        Производитель:<span>{item.manufacturer}</span>
+        Производитель:<span>{item?.manufacturer}</span>
       </li>
       <li>
-        Назначение:<span>{item.description.small}</span>
+        Назначение:<span>{item?.description.small}</span>
       </li>
       <li>
-        Бренд:<span>{item.brend}</span>
+        Бренд:<span>{item?.brend}</span>
       </li>
       <li>
-        Штрихкод:<span>{item.code}</span>
+        Штрихкод:<span>{item?.code}</span>
       </li>
       <li>
-        Размер:<span>{item.size.value}</span>
+        Размер:<span>{item?.size.value}</span>
       </li>
     </ul>
   );

@@ -7,6 +7,7 @@ import React from "react";
 import { loadCatalog } from "@store/reducers/reducerCatalog";
 import PageContainer from "@containers/page-container/page-container";
 import CartPage from "@pages/cart-page/cart-page";
+import AdminPage from "@pages/admin-page/admin-page";
 
 const App = () => {
   const dispatch = useAppDispatch();
@@ -35,6 +36,7 @@ const App = () => {
         },
       ],
     },
+    { path: "/admin", element: <AdminPage /> },
   ]);
   return <RouterProvider router={router} />;
 };

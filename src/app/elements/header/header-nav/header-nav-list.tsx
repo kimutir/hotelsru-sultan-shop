@@ -11,11 +11,11 @@ const HeaderNavList: React.FC<PropsType> = ({ screen }) => {
     { id: "admin-page", title: "АДМИНКА", link: "/admin" },
     {
       id: "delivery-link",
-      title: "Доставка и Оплата",
-      link: "/",
+      title: "АДМИНКА",
+      link: "/admin",
     },
-    { id: "back-link", title: "Возврат", link: "/" },
-    { id: "contacts-link", title: "Контакты", link: "/" },
+    { id: "back-link", title: "АДМИНКА", link: "/admin" },
+    { id: "contacts-link", title: "АДМИНКА", link: "/admin" },
   ];
 
   return (

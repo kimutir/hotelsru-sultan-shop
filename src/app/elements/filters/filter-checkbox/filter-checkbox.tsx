@@ -9,15 +9,26 @@ interface PropsType {
   onChange: (value: string) => void;
   reset: boolean;
   setReset: (value: boolean) => void;
+  checkedOptions: string[];
 }
 
 // eslint-disable-next-line react/display-name
 const FilterCheckbox: React.FC<PropsType> = React.memo(
-  ({ title, checkboxOptions, onChange, reset, setReset }) => {
+  ({ title, checkboxOptions, onChange, reset, setReset, checkedOptions }) => {
     const [optionsList, setOptionsList] = React.useState<string[]>([]);
     const [inputValue, setInputValue] = React.useState("");
     const checkboxWrapper = React.useRef<HTMLDivElement>();
     const customInput = React.useRef<HTMLFormElement>();
+
+    React.useEffect(() => {
+      if (checkboxWrapper.current && checkedOptions.length) {
+        checkboxWrapper.current.querySelectorAll("input").forEach((i) => {
+          if (checkedOptions.includes(i.value)) {
+            i.checked = true;
+          }
+        });
+      }
+    }, [checkedOptions, checkboxWrapper.current]);
 
     React.useEffect(() => {
       if (inputValue) {

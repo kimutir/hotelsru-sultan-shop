@@ -1,5 +1,6 @@
 declare namespace PaginationNumbersModuleCssNamespace {
   export interface IPaginationNumbersModuleCss {
+    "active": string;
     "pagination": string;
     "pagination-item": string;
   }

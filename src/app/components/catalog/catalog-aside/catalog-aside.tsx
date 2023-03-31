@@ -82,6 +82,7 @@ const CatalogAside: React.FC<PropsType> = ({ top, left }) => {
           onChange={onCheckboxClick}
           checkboxOptions={checkboxOptions}
           title="Производитель"
+          checkedOptions={catalog.filterParams.brends}
         />
         <LayoutFlex
           width="100%"

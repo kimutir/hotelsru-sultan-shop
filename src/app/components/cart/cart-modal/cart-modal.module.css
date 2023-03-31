@@ -1,0 +1,29 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(52, 52, 52, 0.712);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 25px;
+    position: relative;
+}
+
+.cross {cursor: pointer; position: absolute; top: 20px; left: 93%; cursor: pointer;}
+.cross:before, .cross:after {content: ""; position: absolute; width: 24px; height: 4px; background: gray;}
+.cross:before {transform: rotate(45deg);}
+.cross:after {transform: rotate(-45deg);}

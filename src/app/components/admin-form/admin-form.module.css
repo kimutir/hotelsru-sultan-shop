@@ -1,0 +1,29 @@
+.select-wrapper {
+    width: 150px;
+}
+
+.option-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.form-wrapper {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-input {
+    width: 250px;
+    height: 38px;
+    border-radius: 4px;
+    padding-left: 10px;
+    border: 1px solid  hsl(0, 0%, 80%);
+}
+
+.form-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
