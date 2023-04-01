@@ -52,21 +52,13 @@ module.exports = {
         test: /\.png$/,
         loader: "file-loader",
         options: {
-          name(resourcePath, resourceQuery) {
-            // `resourcePath` - `/absolute/path/to/file.js`
-            // `resourceQuery` - `?foo=bar`
-            // console.log(url.parse());
-            // if (window.location.host.includes("localhost")) {
-            //   return "[path][name].[ext]";
-            // }
-
+          name() {
             if (process.env.NODE_ENV === "production") {
               return "hotelsru-sultan-shop/[path][name].[ext]";
             }
 
             return "[contenthash].[ext]";
           },
-          // name: "hotelsru-sultan-shop/[path][name].[ext]",
         },
       },
     ],
