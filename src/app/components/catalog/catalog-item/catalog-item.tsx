@@ -6,6 +6,8 @@ import React from "react";
 import { useAppDispatch } from "@store/hooks";
 import { addToCart } from "@store/reducers/reducerCart";
 import { Link } from "react-router-dom";
+import iconVolume from "@assets/images/icons/icon-volume.png";
+import iconWeight from "@assets/images/icons/icon-weight.png";
 
 interface PropsType {
   item: CatalogItemType;
@@ -25,7 +27,10 @@ const CatalogItem: React.FC<PropsType> = ({ item }) => {
         <img src={item.img} />
       </div>
       <div className={styles.content}>
-        <p className={styles.size}>{item.size.value}</p>
+        <p className={styles.size}>
+          {item.size.type === "weight" ? <img src={iconWeight} /> : <img src={iconVolume} />}
+          {item.size.value}
+        </p>
         <Link to={`item/${item.code}`}>
           <div className={styles.title}>
             <strong>{item.title}</strong> {item.description.small}
