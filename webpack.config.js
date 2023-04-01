@@ -1,5 +1,7 @@
 const path = require("path");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const url = require("node:url");
+// import url from 'node:url'
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -50,7 +52,21 @@ module.exports = {
         test: /\.png$/,
         loader: "file-loader",
         options: {
-          name: "hotelsru-sultan-shop/[path][name].[ext]",
+          name(resourcePath, resourceQuery) {
+            // `resourcePath` - `/absolute/path/to/file.js`
+            // `resourceQuery` - `?foo=bar`
+            // console.log(url.parse());
+            // if (window.location.host.includes("localhost")) {
+            //   return "[path][name].[ext]";
+            // }
+
+            if (process.env.NODE_ENV === "production") {
+              return "hotelsru-sultan-shop/[path][name].[ext]";
+            }
+
+            return "[contenthash].[ext]";
+          },
+          // name: "hotelsru-sultan-shop/[path][name].[ext]",
         },
       },
     ],
