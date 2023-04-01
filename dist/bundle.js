@@ -599,7 +599,7 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-burger.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-burger.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-burger.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-burger.png?");
 
 /***/ }),
 
@@ -610,7 +610,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-cart-white.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-cart-white.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-cart-white.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-cart-white.png?");
 
 /***/ }),
 
@@ -621,7 +621,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-cart.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-cart.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-cart.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-cart.png?");
 
 /***/ }),
 
@@ -632,7 +632,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-catalog-dark.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-catalog-dark.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-catalog-dark.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-catalog-dark.png?");
 
 /***/ }),
 
@@ -643,7 +643,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-catalog.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-catalog.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-catalog.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-catalog.png?");
 
 /***/ }),
 
@@ -654,7 +654,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-download-grey.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-download-grey.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-download-grey.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-download-grey.png?");
 
 /***/ }),
 
@@ -665,7 +665,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-download.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-download.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-download.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-download.png?");
 
 /***/ }),
 
@@ -676,7 +676,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-enter.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-enter.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-enter.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-enter.png?");
 
 /***/ }),
 
@@ -687,7 +687,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-location.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-location.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-location.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-location.png?");
 
 /***/ }),
 
@@ -698,7 +698,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-mail.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-mail.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-mail.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-mail.png?");
 
 /***/ }),
 
@@ -709,7 +709,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-mastercard.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-mastercard.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-mastercard.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-mastercard.png?");
 
 /***/ }),
 
@@ -720,7 +720,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-next.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-next.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-next.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-next.png?");
 
 /***/ }),
 
@@ -731,7 +731,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-prev.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-prev.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-prev.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-prev.png?");
 
 /***/ }),
 
@@ -742,7 +742,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-search-dark.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-search-dark.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-search-dark.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-search-dark.png?");
 
 /***/ }),
 
@@ -753,7 +753,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-search.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-search.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-search.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-search.png?");
 
 /***/ }),
 
@@ -764,7 +764,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-share.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-share.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-share.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-share.png?");
 
 /***/ }),
 
@@ -775,7 +775,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-telegram.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-telegram.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-telegram.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-telegram.png?");
 
 /***/ }),
 
@@ -786,7 +786,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-trash-white.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-trash-white.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-trash-white.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-trash-white.png?");
 
 /***/ }),
 
@@ -797,7 +797,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-visa.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-visa.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-visa.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-visa.png?");
 
 /***/ }),
 
@@ -808,7 +808,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-volume.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-volume.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-volume.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-volume.png?");
 
 /***/ }),
 
@@ -819,7 +819,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-weight.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-weight.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-weight.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-weight.png?");
 
 /***/ }),
 
@@ -830,7 +830,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/icons/icon-whatsapp.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-whatsapp.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/icons/icon-whatsapp.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/icons/icon-whatsapp.png?");
 
 /***/ }),
 
@@ -841,7 +841,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/logo-white.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/logo-white.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/logo-white.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/logo-white.png?");
 
 /***/ }),
 
@@ -852,7 +852,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/logo.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/logo.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/logo.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/logo.png?");
 
 /***/ }),
 
@@ -863,7 +863,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/assets/images/manager.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/manager.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"hotelsru-sultan-shop/hotelsru-sultan-shop/assets/images/manager.png\");\n\n//# sourceURL=webpack://sultan/./hotelsru-sultan-shop/assets/images/manager.png?");
 
 /***/ }),
 

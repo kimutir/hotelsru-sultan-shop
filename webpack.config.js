@@ -50,7 +50,7 @@ module.exports = {
         test: /\.png$/,
         loader: "file-loader",
         options: {
-          name: "[path][name].[ext]",
+          name: "hotelsru-sultan-shop/[path][name].[ext]",
         },
       },
     ],
