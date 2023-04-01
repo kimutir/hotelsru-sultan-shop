@@ -17,8 +17,8 @@ const HeaderBottom = () => {
   return (
     <div className={styles["header-bottom"]}>
       <LayoutFlex justifyContent="space-between">
-        {/* <img src={logo} alt="" /> */}
-        <img src="/hotelsru-sultan-shop/dist/1660430724c1a393a3ea1b283eab33fc.png" alt="" />
+        <img src={logo} alt="" />
+        {/* <img src="/hotelsru-sultan-shop/dist/1660430724c1a393a3ea1b283eab33fc.png" alt="" /> */}
         <CustomButton onClick={() => navigate("/")} text="Каталог" icon={catalogIcon} />
         <CustomInput placeholder="Поиск..." icon={searchIcon} />
         <HeaderManager img={managerPhoto} />
