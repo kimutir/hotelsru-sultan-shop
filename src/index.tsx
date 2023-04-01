@@ -9,8 +9,8 @@ const root = createRoot(div);
 
 root.render(
   <Provider store={store}>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    {/* <HashRouter> */}
+    <App />
+    {/* </HashRouter> */}
   </Provider>,
 );
