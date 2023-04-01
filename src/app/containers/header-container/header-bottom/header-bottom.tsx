@@ -9,10 +9,17 @@ import styles from "./header-bottom.module.css";
 import HeaderCart from "@components/header-cart/header-cart";
 import LayoutFlex from "@layouts/layout-flex";
 import HeaderManager from "@elements/header/header-manager/header-manager";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useNavigation } from "react-router-dom";
 
 const HeaderBottom = () => {
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const nav = useNavigation();
+  console.log("nav:", nav);
+  console.log("location:", window.location);
+
+  console.log("logo:", logo);
 
   return (
     <div className={styles["header-bottom"]}>
