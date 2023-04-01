@@ -1,7 +1,7 @@
 import CatalogMain from "@pages/catalog-main/catalog-main";
 import ItemPage from "@pages/item-page/item-page";
 import { useAppDispatch } from "@store/hooks";
-import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import data from "../initial-data.json";
 import React from "react";
 import { loadCatalog } from "@store/reducers/reducerCatalog";
