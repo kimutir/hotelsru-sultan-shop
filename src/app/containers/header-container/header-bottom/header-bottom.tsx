@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const HeaderBottom = () => {
   const navigate = useNavigate();
-
+  console.log("logo:", logo);
   return (
     <div className={styles["header-bottom"]}>
       <LayoutFlex justifyContent="space-between">

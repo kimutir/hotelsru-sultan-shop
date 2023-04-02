@@ -32,7 +32,8 @@ const CatalogList: React.FC<PropsType> = ({ screen }) => {
     }, [sortedCatalogList, page]),
   };
 
-  // сортировка списка товаров
+  // сортировка списка товаров по парамерам
+  // и обновления из localStorage
   React.useEffect(() => {
     let inititalCatalog = { ...catalog };
     const catalogListFromLocalStorageJSON = localStorage.getItem("sultan-store-kim");
@@ -49,10 +50,10 @@ const CatalogList: React.FC<PropsType> = ({ screen }) => {
     let result = [...Object.values(inititalCatalog)];
     const [value, direction] = sortParam.split("-");
     if (direction === "down") {
-      result.sort((a, b) => (a[value] > b[value] ? -1 : 1));
+      result.sort((a, b) => (a[value].toLowerCase() > b[value].toLowerCase() ? -1 : 1));
     }
     if (direction === "up") {
-      result.sort((a, b) => (a[value] > b[value] ? 1 : -1));
+      result.sort((a, b) => (a[value].toLowerCase() > b[value].toLowerCase() ? 1 : -1));
     }
 
     setSortedCatalogList(result);
