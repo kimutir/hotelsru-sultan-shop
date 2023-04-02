@@ -54,7 +54,7 @@ module.exports = (env, options) => {
           options: {
             name() {
               if (mode === "production") {
-                return "hotelsru-sultan-shop/[name].[ext]";
+                return "hotelsru-sultan-shop/[path][name].[ext]";
               }
               return "[name].[ext]";
             },
