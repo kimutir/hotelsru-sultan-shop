@@ -8,6 +8,7 @@ declare namespace CartItemModuleCssNamespace {
     "item-wrapper": string;
     "item-wrapper-small": string;
     "last-item": string;
+    "size": string;
   }
 }
 

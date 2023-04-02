@@ -6,6 +6,8 @@ import LayoutFlex from "@layouts/layout-flex";
 import ItemCharacteristics from "@elements/item/item-characteristics/item-characteristics";
 import ItemActionsSmall from "../item-actions/item-actions-small";
 import ItemCartSmall from "@elements/item/item-cart/item-cart-small";
+import iconVolume from "@assets/images/icons/icon-volume.png";
+import iconWeight from "@assets/images/icons/icon-weight.png";
 
 interface PropsType {
   item: CatalogItemType;
@@ -20,10 +22,12 @@ const ItemDescriptionSmall: React.FC<PropsType> = ({ item, onAddToCart }) => {
       </div>
       <div className={styles["content-wrapper-small"]}>
         <h3 className={styles.title}>{item?.title}</h3>
-        <p>{item?.size.value}</p>
+        <p className={styles.size}>
+          {item?.size.type === "weight" ? <img src={iconWeight} /> : <img src={iconVolume} />}
+          {item?.size.value}
+        </p>
         <ItemCartSmall onAddToCart={onAddToCart} item={item} />
         <ItemActionsSmall />
-
         <div></div>
         <div className={styles["description-small"]}>
           <p>

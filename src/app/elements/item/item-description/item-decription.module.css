@@ -37,8 +37,6 @@
 
 .image-small {
     width: 100%;
-    /* width:250px;
-    height: 180px; */
 }
 
 .description-small {
@@ -48,4 +46,17 @@
 }
 .description-small p span {
     margin-left: 5px;
+}
+
+.size {
+    font-size: 16px;
+    line-height: 130%;
+    color: #3F4E65;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.size img {
+    margin-right: 5px;
 }

@@ -64,3 +64,16 @@
     line-height: 36px;
     color: #111111;
 }
+
+.size {
+    font-size: 16px;
+    line-height: 130%;
+    color: #3F4E65;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.size img {
+    margin-right: 5px;
+}

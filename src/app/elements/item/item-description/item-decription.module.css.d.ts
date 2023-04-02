@@ -7,6 +7,7 @@ declare namespace ItemDecriptionModuleCssNamespace {
     "image-small": string;
     "image-wrapper": string;
     "image-wrapper-small": string;
+    "size": string;
     "title": string;
   }
 }

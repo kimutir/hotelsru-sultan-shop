@@ -28,8 +28,8 @@ const CatalogItem: React.FC<PropsType> = ({ item }) => {
       </div>
       <div className={styles.content}>
         <p className={styles.size}>
-          {item.size.type === "weight" ? <img src={iconWeight} /> : <img src={iconVolume} />}
-          {item.size.value}
+          {item?.size.type === "weight" ? <img src={iconWeight} /> : <img src={iconVolume} />}
+          {item?.size.value}
         </p>
         <Link to={`item/${item.code}`}>
           <div className={styles.title}>

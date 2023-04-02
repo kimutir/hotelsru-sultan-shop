@@ -27,7 +27,7 @@ const ItemCartSmall: React.FC<PropsType> = ({ item, onAddToCart }) => {
             style: "currency",
             currency: "RUB",
             minimumFractionDigits: 0,
-          }).format(item.price * itemsAmount)}
+          }).format(item?.price * itemsAmount)}
         </p>
         <div className={styles.actions}>
           <button
