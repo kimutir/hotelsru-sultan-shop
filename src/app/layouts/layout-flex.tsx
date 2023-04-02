@@ -46,7 +46,7 @@ const LayoutFlex: React.FC<PropsType> = ({
           paddingBottom: paddingBottom ?? "0",
           marginTop: marginTop ?? "0",
           marginBottom: marginBottom ?? "0",
-          width: width ?? "1370px",
+          width: width ?? "1280px",
           display: "flex",
           justifyContent: justifyContent ?? "center",
           flexDirection: flexDirection ?? "row",

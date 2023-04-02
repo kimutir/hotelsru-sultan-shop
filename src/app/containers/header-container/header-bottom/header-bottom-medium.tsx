@@ -13,7 +13,7 @@ const HeaderBottomMedium = () => {
 
   return (
     <div className={styles["header-bottom"]}>
-      <LayoutFlex justifyContent="space-evenly" width="90%">
+      <LayoutFlex justifyContent="space-between" width="90%">
         <img src={logo} alt="" />
         <CustomButton onClick={() => navigate("/")} text="Каталог" icon={catalogIcon} />
         <CustomInput placeholder="Поиск..." icon={searchIcon} />

@@ -23,15 +23,29 @@ const CatalogAside: React.FC<PropsType> = ({ top, left }) => {
   const [resetCheckbox, setResetCheckbox] = React.useState(false);
 
   const checkboxOptions: string[] = React.useMemo(() => {
-    const result = [];
-    Object.values(catalog.list)
+    const options = [];
+
+    let inititalCatalog = { ...catalog.list };
+    const catalogListFromLocalStorageJSON = localStorage.getItem("sultan-store-kim");
+    const removedItemsJSON = localStorage.getItem("sultan-store-kim-deleted");
+    const catalogFromLS = JSON.parse(catalogListFromLocalStorageJSON);
+    for (const itemFromLS in catalogFromLS) {
+      inititalCatalog[itemFromLS] = JSON.parse(catalogFromLS[itemFromLS]);
+    }
+    for (const catalogCode in inititalCatalog) {
+      if (removedItemsJSON?.length && JSON.parse(removedItemsJSON).includes(catalogCode)) {
+        delete inititalCatalog[catalogCode];
+      }
+    }
+
+    Object.values(inititalCatalog)
       .map((i) => i.brend)
       .forEach((i) => {
-        if (!result.includes(i)) {
-          result.push(i);
+        if (!options.includes(i)) {
+          options.push(i);
         }
       });
-    return result;
+    return options;
   }, [catalog]);
 
   const filterOptions = [

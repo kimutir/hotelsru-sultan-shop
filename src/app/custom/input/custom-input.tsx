@@ -41,7 +41,7 @@ const CustomInput: React.FC<PropsType> = (props) => {
         className={styles.submit}
         type="submit"
         value=""
-        style={{ backgroundImage: `url(${props.icon})` }}
+        style={{ backgroundImage: `url(${props.icon})`, backgroundColor: "transparent" }}
       />
     </form>
   );

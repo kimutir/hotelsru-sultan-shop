@@ -5,7 +5,7 @@ import styles from "./header-top.module.css";
 const HeaderTopMedium = () => {
   return (
     <div className={styles["header-top-medium"]}>
-      <LayoutFlex flexDirection="column" gap="20px" width="80%">
+      <LayoutFlex justifyContent="space-between" gap="20px" width="90%">
         <HeaderNavList screen="medium" />
       </LayoutFlex>
     </div>

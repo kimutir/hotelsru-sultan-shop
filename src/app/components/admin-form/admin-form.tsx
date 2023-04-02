@@ -179,7 +179,7 @@ const AdminForm: React.FC<PropsType> = ({ item, toRerender, actionType }) => {
         />
       </div>
       <div className={styles["form-option"]}>
-        <label htmlFor="admin-description-short">Описание краткое::</label>
+        <label htmlFor="admin-description-short">Описание краткое:</label>
         <input
           autoComplete="off"
           className={styles["form-input"]}
