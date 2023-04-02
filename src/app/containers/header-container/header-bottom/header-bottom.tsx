@@ -9,23 +9,15 @@ import styles from "./header-bottom.module.css";
 import HeaderCart from "@components/header-cart/header-cart";
 import LayoutFlex from "@layouts/layout-flex";
 import HeaderManager from "@elements/header/header-manager/header-manager";
-import { useLocation, useNavigate, useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HeaderBottom = () => {
   const navigate = useNavigate();
-
-  const location = useLocation();
-  const nav = useNavigation();
-  console.log("nav:", nav);
-  console.log("location:", window.location);
-
-  console.log("logo:", logo);
 
   return (
     <div className={styles["header-bottom"]}>
       <LayoutFlex justifyContent="space-between">
         <img src={logo} alt="" />
-        {/* <img src="/hotelsru-sultan-shop/dist/1660430724c1a393a3ea1b283eab33fc.png" alt="" /> */}
         <CustomButton onClick={() => navigate("/")} text="Каталог" icon={catalogIcon} />
         <CustomInput placeholder="Поиск..." icon={searchIcon} />
         <HeaderManager img={managerPhoto} />

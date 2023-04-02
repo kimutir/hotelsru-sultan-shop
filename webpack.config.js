@@ -1,7 +1,5 @@
 const path = require("path");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
-const url = require("node:url");
-// import url from 'node:url'
 
 module.exports = (env, options) => {
   const mode = options.mode;
@@ -15,7 +13,7 @@ module.exports = (env, options) => {
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".json"],
       alias: {
-        "@assets": path.resolve(__dirname, "./hotelsru-sultan-shop/assets/"),
+        "@assets": path.resolve(__dirname, "./src/assets/"),
         "@custom": path.resolve(__dirname, "./src/app/custom/"),
         "@pages": path.resolve(__dirname, "./src/app/pages/"),
         "@layouts": path.resolve(__dirname, "./src/app/layouts/"),
@@ -56,11 +54,11 @@ module.exports = (env, options) => {
           options: {
             name() {
               if (mode === "production") {
-                return "hotelsru-sultan-shop/[path][name].[ext]";
+                return "hotelsru-sultan-shop/[name].[ext]";
               }
-
-              return "[contenthash].[ext]";
+              return "[name].[ext]";
             },
+            // outputPath: path.resolve(__dirname, "./dist/images"),
           },
         },
       ],
