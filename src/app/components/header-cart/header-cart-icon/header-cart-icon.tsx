@@ -1,7 +1,7 @@
 import { useAppSelector } from "@store/hooks";
 import styles from "../header-cart.module.css";
 import cartIcon from "@assets/images/icons/icon-cart.png";
-import getTotalIncart from "@utils/getTotalInCart";
+import getTotalIncart from "@utils/totalInCart/getTotalInCart";
 import { useNavigate } from "react-router-dom";
 
 const HeaderCartIcon = () => {

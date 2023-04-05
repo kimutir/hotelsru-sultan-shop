@@ -1,0 +1,7 @@
+{
+    "transform": {
+        "^.+\\.tsx?$": "ts-jest",
+        ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform"
+    },
+    "testEnvironment": "jsdom"
+}

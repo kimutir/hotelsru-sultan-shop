@@ -1,6 +1,6 @@
 import styles from "./header-cart.module.css";
 import { useAppSelector } from "@store/hooks";
-import getTotalIncart from "@utils/getTotalInCart";
+import getTotalIncart from "@utils/totalInCart/getTotalInCart";
 import { Link } from "react-router-dom";
 import HeaderCartIcon from "./header-cart-icon/header-cart-icon";
 

@@ -46,7 +46,6 @@ const AdminPage = () => {
       for (const key in itemsFromLS) {
         if (deletedItems.includes(key)) {
           delete itemsFromLS[key];
-          // arr = arr.filter((i) => i !== key);
         }
       }
 

@@ -44,9 +44,7 @@ export const catalogSlice = createSlice({
       for (const key in action.payload) {
         if (key === "for" && !Array.isArray(action.payload["for"])) {
           if (state.filterParams["for"].includes(action.payload["for"])) {
-            state.filterParams["for"] = state.filterParams["for"].filter(
-              (i) => i !== action.payload["for"],
-            );
+            state.filterParams["for"] = state.filterParams["for"].filter((i) => i !== action.payload["for"]);
           } else {
             state.filterParams["for"].push(action.payload["for"]);
           }

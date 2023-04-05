@@ -8,12 +8,14 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+    jest: true
   },
   plugins: [
     "eslint-plugin-react",
     "eslint-plugin-react-hooks",
     "react-hooks",
     "@typescript-eslint",
+    "jest"
   ],
   extends: ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended"],
   settings: {
@@ -28,6 +30,10 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
-    // You can do more rule customizations here...
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
   },
 };

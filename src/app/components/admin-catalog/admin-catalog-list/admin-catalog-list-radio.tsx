@@ -8,7 +8,6 @@ interface PropsType {
 
 const AdminCatalogListRadio: React.FC<PropsType> = ({ onItemClick }) => {
   const [catalogToRender, setCatalogToRender] = React.useState([]);
-  // const [itemsToDelete, setItemsToDelete] = React.useState([]);
   const catalogList = useAppSelector((state) => state.catalog.list);
   const catalogListFromLocalStorageJSON = localStorage.getItem("sultan-store-kim");
   const removedItemsJSON = localStorage.getItem("sultan-store-kim-deleted");
@@ -27,20 +26,6 @@ const AdminCatalogListRadio: React.FC<PropsType> = ({ onItemClick }) => {
 
     setCatalogToRender(Object.values(catalog));
   }, [catalogList, catalogListFromLocalStorageJSON, removedItemsJSON]);
-
-  // const onItemClick = (id: string) => {
-  //   if (itemsToDelete.includes(id)) {
-  //     const filtered = [...itemsToDelete].filter((i) => i !== id);
-  //     setItemsToDelete(filtered);
-  //   } else {
-  //     setItemsToDelete([...itemsToDelete, id]);
-  //   }
-  // };
-
-  // const onHandleDeleteClick = () => {
-  //   onDelete(itemsToDelete);
-  //   setItemsToDelete([]);
-  // };
 
   return (
     <>

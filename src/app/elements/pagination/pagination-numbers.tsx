@@ -1,4 +1,4 @@
-import getPaginationNumbers from "../../utils/getPaginationNumbers";
+import getPaginationNumbers from "@utils/paginationNumbers/getPaginationNumbers";
 import React from "react";
 import styles from "./pagination-numbers.module.css";
 import nextIcon from "@assets/images/icons/icon-next.png";
