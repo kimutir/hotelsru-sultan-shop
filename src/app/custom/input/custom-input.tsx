@@ -7,7 +7,7 @@ interface PropsType {
   placeholder: string;
   icon: string;
   id?: string;
-  formRef?: any;
+  formRef?: React.MutableRefObject<HTMLFormElement>;
 }
 
 const CustomInput: React.FC<PropsType> = (props) => {
@@ -25,24 +25,9 @@ const CustomInput: React.FC<PropsType> = (props) => {
   };
 
   return (
-    <form
-      ref={props.formRef}
-      id={props.id ?? ""}
-      className={styles["input-wrapper"]}
-      onSubmit={(e) => onSubmitHandle(e)}
-    >
-      <input
-        onChange={(e) => onInputChangehandle(e)}
-        type="text"
-        placeholder={props.placeholder}
-        className={styles.input}
-      />
-      <input
-        className={styles.submit}
-        type="submit"
-        value=""
-        style={{ backgroundImage: `url(${props.icon})`, backgroundColor: "transparent" }}
-      />
+    <form ref={props.formRef} id={props.id ?? ""} className={styles["input-wrapper"]} onSubmit={(e) => onSubmitHandle(e)}>
+      <input onChange={(e) => onInputChangehandle(e)} type="text" placeholder={props.placeholder} className={styles.input} />
+      <input className={styles.submit} type="submit" value="" style={{ backgroundImage: `url(${props.icon})`, backgroundColor: "transparent" }} />
     </form>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./hidden-content.module.css";
 
 interface PropsType {
-  children: any;
+  children: React.ReactNode;
   title: string;
   screen?: "small";
 }

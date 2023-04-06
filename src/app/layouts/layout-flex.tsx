@@ -4,7 +4,7 @@ interface PropsType {
   justifyContent?: "space-between" | "space-evenly" | "flex-end" | "start";
   flexDirection?: "column";
   alignItems?: "top";
-  children: any;
+  children: React.ReactNode;
   marginTop?: string;
   marginBottom?: string;
   width?: string;
@@ -15,20 +15,7 @@ interface PropsType {
   gap?: string;
 }
 
-const LayoutFlex: React.FC<PropsType> = ({
-  children,
-  justifyContent,
-  alignItems,
-  flexDirection,
-  marginTop,
-  marginBottom,
-  width,
-  height,
-  backgroundColor,
-  paddingTop,
-  paddingBottom,
-  gap,
-}) => {
+const LayoutFlex: React.FC<PropsType> = ({ children, justifyContent, alignItems, flexDirection, marginTop, marginBottom, width, height, backgroundColor, paddingTop, paddingBottom, gap }) => {
   return (
     <div
       style={{

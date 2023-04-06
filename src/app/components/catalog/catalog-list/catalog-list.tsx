@@ -5,6 +5,7 @@ import CatalogItem from "../catalog-item/catalog-item";
 import styles from "./catalog-list.module.css";
 import { CatalogItemType } from "@store/reducers/reducerCatalog";
 import PaginationNumbers from "@elements/pagination/pagination-numbers";
+import getCurrentCatalog from "@utils/getCurrentCatalog/getCurrentCatalog";
 
 interface PropsType {
   screen?: "medium" | "small" | "big" | "small-list";
@@ -35,19 +36,7 @@ const CatalogList: React.FC<PropsType> = ({ screen }) => {
   // сортировка списка товаров по парамерам
   // и обновления из localStorage
   React.useEffect(() => {
-    let inititalCatalog = { ...catalog };
-    const catalogListFromLocalStorageJSON = localStorage.getItem("sultan-store-kim");
-    const removedItemsJSON = localStorage.getItem("sultan-store-kim-deleted");
-    const catalogFromLS = JSON.parse(catalogListFromLocalStorageJSON);
-    for (const itemFromLS in catalogFromLS) {
-      inititalCatalog[itemFromLS] = JSON.parse(catalogFromLS[itemFromLS]);
-    }
-    for (const catalogCode in inititalCatalog) {
-      if (removedItemsJSON?.length && JSON.parse(removedItemsJSON).includes(catalogCode)) {
-        delete inititalCatalog[catalogCode];
-      }
-    }
-    let result = [...Object.values(inititalCatalog)];
+    let result = [...Object.values(getCurrentCatalog({ catalog }))];
     const [value, direction] = sortParam.split("-");
     if (direction === "down") {
       result.sort((a, b) => (a[value].toLowerCase() > b[value].toLowerCase() ? -1 : 1));
@@ -94,8 +83,7 @@ const CatalogList: React.FC<PropsType> = ({ screen }) => {
 
   // список товаров на страницу
   React.useEffect(() => {
-    if (page > Math.ceil(catalogList.length / perPage))
-      setPage(Math.ceil(catalogList.length / perPage) || 1);
+    if (page > Math.ceil(catalogList.length / perPage)) setPage(Math.ceil(catalogList.length / perPage) || 1);
 
     let result = [...catalogList];
     result = result.slice((page - 1) * perPage, perPage * page);
@@ -104,34 +92,15 @@ const CatalogList: React.FC<PropsType> = ({ screen }) => {
   }, [page, catalogList]);
 
   return (
-    <div
-      className={
-        screen === "medium"
-          ? styles["catalog-list-meduim"]
-          : screen === "small" || screen === "small-list"
-          ? styles["catalog-list-small"]
-          : styles["catalog-list"]
-      }
-    >
+    <div className={screen === "medium" ? styles["catalog-list-meduim"] : screen === "small" || screen === "small-list" ? styles["catalog-list-small"] : styles["catalog-list"]}>
       <div className={!screen.includes("small") ? styles.catalog : styles["catalog-small"]}>
-        {renderCatalogList.length
-          ? renderCatalogList.map((item) => <CatalogItem item={item} key={item["code"]} />)
-          : "Не найдено"}
+        {renderCatalogList.length ? renderCatalogList.map((item) => <CatalogItem item={item} key={item["code"]} />) : "Не найдено"}
       </div>
-      <PaginationNumbers
-        nextPage={callbacks.nextPage}
-        prevPage={callbacks.prevPage}
-        currentPage={page}
-        onPaginationClick={setPage}
-        perPage={perPage}
-        itemsAmount={catalogList.length}
-      />
+      <PaginationNumbers nextPage={callbacks.nextPage} prevPage={callbacks.prevPage} currentPage={page} onPaginationClick={setPage} perPage={perPage} itemsAmount={catalogList.length} />
       <p className={styles["catalog-list-description"]}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur, quam sint
-        alias modi ipsa enim magni aliquid veniam voluptatibus optio est minima sit, dolorum commodi
-        consequuntur recusandae laudantium nemo. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Cupiditate consectetur, quam sint alias modi ipsa enim magni aliquid veniam
-        voluptatibus optio est minima sit, dolorum commodi consequuntur recusandae laudantium nemo.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur, quam sint alias modi ipsa enim magni aliquid veniam voluptatibus optio est minima sit, dolorum commodi
+        consequuntur recusandae laudantium nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur, quam sint alias modi ipsa enim magni aliquid veniam voluptatibus optio
+        est minima sit, dolorum commodi consequuntur recusandae laudantium nemo.
       </p>
     </div>
   );

@@ -1,3 +1,4 @@
+import Price from "@elements/price/price";
 import styles from "./cart-total.module.css";
 import CustomButton from "@custom/button/custom-button";
 import LayoutFlex from "@layouts/layout-flex";
@@ -35,11 +36,7 @@ const CartTotal: React.FC<PropsType> = ({ items, openModal, screen }) => {
     >
       <CustomButton text="Оформить заказ" onClick={onButtonClik} />
       <p className={styles.total}>
-        {Intl.NumberFormat("ru-RU", {
-          style: "currency",
-          currency: "RUB",
-          minimumFractionDigits: 0,
-        }).format(total)}
+        <Price value={total} />
       </p>
     </LayoutFlex>
   );

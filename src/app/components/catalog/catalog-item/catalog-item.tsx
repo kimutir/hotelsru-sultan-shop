@@ -8,6 +8,7 @@ import { addToCart } from "@store/reducers/reducerCart";
 import { Link } from "react-router-dom";
 import iconVolume from "@assets/images/icons/icon-volume.png";
 import iconWeight from "@assets/images/icons/icon-weight.png";
+import Price from "@elements/price/price";
 
 interface PropsType {
   item: CatalogItemType;
@@ -22,7 +23,7 @@ const CatalogItem: React.FC<PropsType> = ({ item }) => {
   };
 
   return (
-    <div className={styles.item}>
+    <div className={styles.item} data-testid="catalog-item">
       <div className={styles.image}>
         <img src={item.img} />
       </div>
@@ -54,17 +55,9 @@ const CatalogItem: React.FC<PropsType> = ({ item }) => {
         </p>
         <div className={styles.bottom}>
           <strong>
-            {Intl.NumberFormat("ru-RU", {
-              style: "currency",
-              currency: "RUB",
-              minimumFractionDigits: 0,
-            }).format(item.price)}
+            <Price value={item.price} />
           </strong>
-          <CustomButton
-            onClick={() => dispatch(addToCart({ item }))}
-            text="В корзину"
-            icon={cartIcon}
-          />
+          <CustomButton onClick={() => dispatch(addToCart({ item }))} text="В корзину" icon={cartIcon} />
         </div>
       </div>
     </div>

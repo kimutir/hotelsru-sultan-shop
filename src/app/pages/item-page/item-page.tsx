@@ -9,6 +9,7 @@ import { useOutletContext } from "react-router-dom";
 import { PageSizesType } from "@containers/page-container/types";
 import ItemDescriptionMedium from "@elements/item/item-description/item-description-medium";
 import ItemDescriptionSmall from "@elements/item/item-description/item-description-small";
+import getCurrentCatalog from "@utils/getCurrentCatalog/getCurrentCatalog";
 
 const ItemPage = () => {
   const { itemCode } = useLoaderData() as { itemCode: string };
@@ -19,20 +20,7 @@ const ItemPage = () => {
   const { isBigScreen, isMediumScreen, isSmallScreen } = useOutletContext<PageSizesType>();
 
   React.useEffect(() => {
-    let inititalCatalog = { ...catalog };
-    const catalogListFromLocalStorageJSON = localStorage.getItem("sultan-store-kim");
-    const removedItemsJSON = localStorage.getItem("sultan-store-kim-deleted");
-    const catalogFromLS = JSON.parse(catalogListFromLocalStorageJSON);
-    for (const itemFromLS in catalogFromLS) {
-      inititalCatalog[itemFromLS] = JSON.parse(catalogFromLS[itemFromLS]);
-    }
-    for (const catalogCode in inititalCatalog) {
-      if (removedItemsJSON?.length && JSON.parse(removedItemsJSON).includes(catalogCode)) {
-        delete inititalCatalog[catalogCode];
-      }
-    }
-
-    setFinalCatalog(inititalCatalog);
+    setFinalCatalog(getCurrentCatalog({ catalog }));
   }, [catalog, itemCode]);
 
   const onAddToCart = React.useCallback(
@@ -50,21 +38,13 @@ const ItemPage = () => {
   return (
     <>
       {!isSmallScreen && (
-        <LayoutFlex
-          justifyContent="start"
-          marginTop="30px"
-          width={!isBigScreen ? "90%" : undefined}
-        >
+        <LayoutFlex justifyContent="start" marginTop="30px" width={!isBigScreen ? "90%" : undefined}>
           <HistoryLinks data={historyData} />
         </LayoutFlex>
       )}
       {isBigScreen && <ItemDescription onAddToCart={onAddToCart} item={finalCatalog[itemCode]} />}
-      {isMediumScreen && (
-        <ItemDescriptionMedium onAddToCart={onAddToCart} item={finalCatalog[itemCode]} />
-      )}
-      {isSmallScreen && (
-        <ItemDescriptionSmall onAddToCart={onAddToCart} item={finalCatalog[itemCode]} />
-      )}
+      {isMediumScreen && <ItemDescriptionMedium onAddToCart={onAddToCart} item={finalCatalog[itemCode]} />}
+      {isSmallScreen && <ItemDescriptionSmall onAddToCart={onAddToCart} item={finalCatalog[itemCode]} />}
     </>
   );
 };

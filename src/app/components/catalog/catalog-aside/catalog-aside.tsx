@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from "@store/hooks";
 import React from "react";
 import { changeFilterParams } from "@store/reducers/reducerCatalog";
 import CatalogFilterFor from "@components/catalog/catalog-filter-for/catalog-filter-for";
+import getCurrentCatalog from "@utils/getCurrentCatalog/getCurrentCatalog";
 
 interface PropsType {
   top?: string;
@@ -25,20 +26,7 @@ const CatalogAside: React.FC<PropsType> = ({ top, left }) => {
   const checkboxOptions: string[] = React.useMemo(() => {
     const options = [];
 
-    let inititalCatalog = { ...catalog.list };
-    const catalogListFromLocalStorageJSON = localStorage.getItem("sultan-store-kim");
-    const removedItemsJSON = localStorage.getItem("sultan-store-kim-deleted");
-    const catalogFromLS = JSON.parse(catalogListFromLocalStorageJSON);
-    for (const itemFromLS in catalogFromLS) {
-      inititalCatalog[itemFromLS] = JSON.parse(catalogFromLS[itemFromLS]);
-    }
-    for (const catalogCode in inititalCatalog) {
-      if (removedItemsJSON?.length && JSON.parse(removedItemsJSON).includes(catalogCode)) {
-        delete inititalCatalog[catalogCode];
-      }
-    }
-
-    Object.values(inititalCatalog)
+    Object.values(getCurrentCatalog({ catalog: catalog.list }))
       .map((i) => i.brend)
       .forEach((i) => {
         if (!options.includes(i)) {
@@ -79,17 +67,9 @@ const CatalogAside: React.FC<PropsType> = ({ top, left }) => {
     dispatch(changeFilterParams({ price: "", brends: [], for: [] }));
   };
   return (
-    <div
-      style={{ top: top ?? "0", left: left ?? "0" }}
-      className={top && styles["aside-wrapper-small"]}
-    >
+    <div style={{ top: top ?? "0", left: left ?? "0" }} className={top && styles["aside-wrapper-small"]}>
       <div>
-        <FilterPrice
-          onInputChangeFrom={setPriceFrom}
-          onInputChangeTo={setPriceTo}
-          reset={resetCheckbox}
-          setReset={setResetCheckbox}
-        />
+        <FilterPrice onInputChangeFrom={setPriceFrom} onInputChangeTo={setPriceTo} reset={resetCheckbox} setReset={setResetCheckbox} />
         <FilterCheckbox
           reset={resetCheckbox}
           setReset={setResetCheckbox}
@@ -98,13 +78,7 @@ const CatalogAside: React.FC<PropsType> = ({ top, left }) => {
           title="Производитель"
           checkedOptions={catalog.filterParams.brends}
         />
-        <LayoutFlex
-          width="100%"
-          justifyContent="start"
-          height="auto"
-          marginBottom="50px"
-          gap="20px"
-        >
+        <LayoutFlex width="100%" justifyContent="start" height="auto" marginBottom="50px" gap="20px">
           <CustomButton onClick={onConfirmButtonClick} text="Показать" />
           <CustomButton onClick={onTrashButtonClick} isCircle={true} icon={trashIcon} />
         </LayoutFlex>

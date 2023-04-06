@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./item-cart.module.css";
 import { CatalogItemType } from "@store/reducers/reducerCatalog";
 import iconShare from "@assets/images/icons/icon-share.png";
+import Price from "@elements/price/price";
 
 interface PropsType {
   item: CatalogItemType;
@@ -23,24 +24,14 @@ const ItemCartSmall: React.FC<PropsType> = ({ item, onAddToCart }) => {
     <div className={styles["cart-wrapper-small"]}>
       <div className={styles["cart-content-top-small"]}>
         <p className={styles.price}>
-          {Intl.NumberFormat("ru-RU", {
-            style: "currency",
-            currency: "RUB",
-            minimumFractionDigits: 0,
-          }).format(item?.price * itemsAmount)}
+          <Price value={item?.price * itemsAmount} />
         </p>
         <div className={styles.actions}>
-          <button
-            className={styles["cart-button"]}
-            onClick={() => setItemsAmount((prev) => (prev > 1 ? (prev -= 1) : 1))}
-          >
+          <button className={styles["cart-button"]} onClick={() => setItemsAmount((prev) => (prev > 1 ? (prev -= 1) : 1))}>
             -
           </button>
           {itemsAmount}
-          <button
-            className={styles["cart-button"]}
-            onClick={() => setItemsAmount((prev) => (prev += 1))}
-          >
+          <button className={styles["cart-button"]} onClick={() => setItemsAmount((prev) => (prev += 1))}>
             +
           </button>
         </div>

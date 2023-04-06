@@ -1,31 +1,20 @@
 import React from "react";
 import styles from "./custom-select.module.css";
-import SelectOption from "./select-option";
+import SelectOption from "./select-option/select-option";
 
 interface PropsType {
   title: string;
   options: { value: string; description: string }[];
-  onChangeSelect: any;
+  onChangeSelect: (value: string) => void;
 }
 
-const CustomSelect: React.FC<PropsType> = ({
-  title,
-  options,
-  onChangeSelect,
-}) => {
+const CustomSelect: React.FC<PropsType> = ({ title, options, onChangeSelect }) => {
   return (
     <div className={styles["select-wrapper"]}>
       <p className={styles["select-title"]}>{title}:</p>
-      <select
-        onChange={(e) => onChangeSelect(e.target.value)}
-        className={styles.select}
-      >
+      <select onChange={(e) => onChangeSelect(e.target.value)} className={styles.select}>
         {options.map((i) => (
-          <SelectOption
-            key={i.value}
-            decription={i.description}
-            value={i.value}
-          />
+          <SelectOption key={i.value} decription={i.description} value={i.value} />
         ))}
       </select>
     </div>

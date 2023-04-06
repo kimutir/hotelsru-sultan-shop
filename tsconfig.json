@@ -16,16 +16,16 @@
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "baseUrl": "src",
     "paths": {
-        "@assets": ["assets"],
-        "@custom/*": ["app/custom/*"],
-        "@pages/*": ["app/pages/*"],
-        "@layouts/*": ["app/layouts/*"],
-        "@components/*": ["app/components/*"],
-        "@containers/*": ["app/containers/*"],
-        "@store/*": ["store/*"],
-        "@elements/*": ["app/elements/*"],
-        "@utils/*": ["utils/*"],
-      }
-    },
+      "@assets": ["assets"],
+      "@custom/*": ["app/custom/*"],
+      "@pages/*": ["app/pages/*"],
+      "@layouts/*": ["app/layouts/*"],
+      "@components/*": ["app/components/*"],
+      "@containers/*": ["app/containers/*"],
+      "@store/*": ["store/*"],
+      "@elements/*": ["app/elements/*"],
+      "@utils/*": ["utils/*"]
+    }
+  },
   "include": ["src"]
 }
