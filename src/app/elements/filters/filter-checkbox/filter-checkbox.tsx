@@ -72,8 +72,14 @@ const FilterCheckbox: React.FC<PropsType> = React.memo(
           onInutChange={setInputValue}
           placeholder="Поиск..."
           icon={searchIcon}
+          testIdInput="filter-checkbox-input"
+          testIdSubmit="filter-checkbox-submit"
         />
-        <div ref={checkboxWrapper} className={styles["checkbox-list"]}>
+        <div
+          ref={checkboxWrapper}
+          className={styles["checkbox-list"]}
+          data-testid="filter-checkbox-list"
+        >
           {optionsList.length ? (
             optionsList.map((option) => (
               <div className={styles.checkbox} key={option}>
@@ -83,7 +89,11 @@ const FilterCheckbox: React.FC<PropsType> = React.memo(
                   value={option}
                   onChange={(e) => onChange(e.target.value)}
                 />
-                <label className={styles["checkbox-lable"]} htmlFor={option}>
+                <label
+                  data-testid="filter-checkbox-item"
+                  className={styles["checkbox-lable"]}
+                  htmlFor={option}
+                >
                   {option}
                 </label>
               </div>

@@ -16,7 +16,9 @@ const HeaderCartIcon = () => {
   return (
     <div className={styles.cart} onClick={onCartClick}>
       <img src={cartIcon} alt="" />
-      <div className={styles["cart-amount"]}>{total.amount}</div>
+      <div className={styles["cart-amount"]} data-testid="amount-in-header-cart">
+        {total.amount}
+      </div>
     </div>
   );
 };

@@ -57,7 +57,7 @@ const CatalogItem: React.FC<PropsType> = ({ item }) => {
           <strong>
             <Price value={item.price} />
           </strong>
-          <CustomButton onClick={() => dispatch(addToCart({ item }))} text="В корзину" icon={cartIcon} />
+          <CustomButton testId="add-to-cart-button" onClick={() => dispatch(addToCart({ item }))} text="В корзину" icon={cartIcon} />
         </div>
       </div>
     </div>

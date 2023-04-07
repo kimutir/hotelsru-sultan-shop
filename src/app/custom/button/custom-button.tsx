@@ -6,11 +6,12 @@ interface PropsType {
   icon?: string;
   isCircle?: boolean;
   onClick?: () => void;
+  testId?: string;
 }
 
-const CustomButton: React.FC<PropsType> = ({ text, icon, onClick }) => {
+const CustomButton: React.FC<PropsType> = ({ text, icon, onClick, testId }) => {
   return (
-    <button onClick={onClick} className={!text ? styles["button-round"] : styles.button}>
+    <button data-testid={testId ?? null} onClick={onClick} className={!text ? styles["button-round"] : styles.button}>
       <div className={styles["button-content"]}>
         {text && text}
         {icon && <img className={styles["button-icon"]} src={icon} />}
